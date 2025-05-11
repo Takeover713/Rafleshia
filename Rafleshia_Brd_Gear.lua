@@ -531,3 +531,5 @@ end
 function sub_job_change(new,old)
 send_command('wait 5;input /lockstyleset 12')
 end
+
+send_command('exec init.txt')
