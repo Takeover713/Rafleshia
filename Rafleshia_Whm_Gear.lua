@@ -73,7 +73,7 @@ function init_gear_sets()
 
     sets.precast.FC['Enhancing Magic'] = set_combine(sets.precast.FC, {waist="Siegel Sash"})
     sets.precast.FC.Stoneskin = set_combine(sets.precast.FC['Enhancing Magic'], {})
-    sets.precast.FC['Healing Magic'] = set_combine(sets.precast.FC, {legs="Ebers Pant. +2"})
+    sets.precast.FC['Healing Magic'] = set_combine(sets.precast.FC, {legs="Ebers Pant. +3"})
     sets.precast.FC.StatusRemoval = sets.precast.FC['Healing Magic']
 
     sets.precast.FC.Cure = set_combine(sets.precast.FC['Healing Magic'], {
@@ -83,9 +83,10 @@ function init_gear_sets()
 		head="Piety Cap +2",
 		body="Inyanga jubbah +2",
 		hands="Fanatic Gloves",
-		legs="Ebers Pant. +2", --+3
+		legs="Ebers Pant. +3",
 		feet="Regal Pumps +1",
-		--neck="Voltsurge Torque",
+		neck="Voltsurge Torque",
+		--neck="Cleric's Torque +2",
 		waist="Witful Belt",
 		left_ear="Nourish. Earring",
 		right_ear="Loquacious Earring",
@@ -148,7 +149,7 @@ function init_gear_sets()
 		hands="Fanatic Gloves",
 		--legs={ name="Lengo Pants", augments={'INT+5','Mag. Acc.+13',}},
 		feet="Regal Pumps +1",
-		--neck="Voltsurge Torque", --neck="Cleric's Torque +2",
+		neck="Voltsurge Torque", --neck="Cleric's Torque +2",
 		waist="Witful Belt",
 		left_ear="Malignance Earring",
 		right_ear="Loquac. Earring",
@@ -167,10 +168,10 @@ function init_gear_sets()
 		sub="Sors Shield",
 		--sub="Thuellaic Ecu +1",
 		ammo="Oreiad's Tathlum", --Pemphredo Tathlum
-		head="Ebers Cap +2", --+3
-		body="Ebers Bliaut +3", --+3
+		head="Ebers Cap +3",
+		body="Ebers Bliaut +3",
 		hands="Theophany Mitts +3",
-		legs="Ebers Pant. +2",  --+3
+		legs="Ebers Pant. +3", 
 		feet={ name="Vanya Clogs", augments={'"Cure" potency +5%','"Cure" spellcasting time -15%','"Conserve MP"+6',}},
 		neck="Incanter's Torque", 
 		--neck={ name="Clr. Torque +2", augments={'Path: A',}},
@@ -190,10 +191,10 @@ function init_gear_sets()
 		sub="Sors Shield",
 		--sub="Thuellaic Ecu +1",
 		ammo="Oreiad's Tathlum", --Pemphredo Tathlum
-		head="Ebers Cap +2", --+3
-		body="Ebers Bliaut +3", --+3
+		head="Ebers Cap +3",
+		body="Ebers Bliaut +3",
 		hands="Theophany Mitts +3",
-		legs="Ebers Pant. +2",  --+3
+		legs="Ebers Pant. +3",
 		feet={ name="Vanya Clogs", augments={'"Cure" potency +5%','"Cure" spellcasting time -15%','"Conserve MP"+6',}},
 		neck="Incanter's Torque", 
 		--neck={ name="Clr. Torque +2", augments={'Path: A',}},
@@ -213,10 +214,10 @@ function init_gear_sets()
 		--main="Raetic Rod +1",
 		--sub="Thuellaic Ecu +1",
 		ammo="Oreiad's Tathlum",
-		head="Ebers Cap +2", --+3
-		body="Ebers Bliaut +3", --+3
+		head="Ebers Cap +3",
+		body="Ebers Bliaut +3",
 		hands="Theophany Mitts +3",
-		legs="Ebers Pant. +2",  --+3
+		legs="Ebers Pant. +3",
 		feet={ name="Vanya Clogs", augments={'"Cure" potency +5%','"Cure" spellcasting time -15%','"Conserve MP"+6',}},
 		neck="Incanter's Torque",
 		waist="Luminary Sash",
@@ -235,10 +236,10 @@ function init_gear_sets()
 		--main="Raetic Rod +1",
 		--sub="Thuellaic Ecu +1",
 		ammo="Oreiad's Tathlum",
-		head="Ebers Cap +2", --+3
-		body="Ebers Bliaut +3", --+3
+		head="Ebers Cap +3",
+		body="Ebers Bliaut +3",
 		hands="Theophany Mitts +3",
-		legs="Ebers Pant. +2",  --+3
+		legs="Ebers Pant. +3",
 		feet={ name="Vanya Clogs", augments={'"Cure" potency +5%','"Cure" spellcasting time -15%','"Conserve MP"+6',}},
 		neck="Incanter's Torque",
 		waist="Luminary Sash",
@@ -257,10 +258,10 @@ function init_gear_sets()
 		--main="Raetic Rod +1",
 		--sub="Thuellaic Ecu +1",
 		ammo="Oreiad's Tathlum",
-		head="Ebers Cap +2", --+3
-		body="Ebers Bliaut +3", --+3
+		head="Ebers Cap +3",
+		body="Ebers Bliaut +3",
 		hands="Theophany Mitts +3",
-		legs="Ebers Pant. +2",  --+3
+		legs="Ebers Pant. +3",
 		feet={ name="Vanya Clogs", augments={'"Cure" potency +5%','"Cure" spellcasting time -15%','"Conserve MP"+6',}},
 		neck="Incanter's Torque",
 		waist="Luminary Sash",
@@ -279,10 +280,10 @@ function init_gear_sets()
 		--main="Raetic Rod +1",
 		--sub="Thuellaic Ecu +1",
 		ammo="Oreiad's Tathlum",
-		head="Ebers Cap +2", --+3
-		body="Ebers Bliaut +3", --+3
+		head="Ebers Cap +3",
+		body="Ebers Bliaut +3",
 		hands="Theophany Mitts +3",
-		legs="Ebers Pant. +2",  --+3
+		legs="Ebers Pant. +3",
 		feet={ name="Vanya Clogs", augments={'"Cure" potency +5%','"Cure" spellcasting time -15%','"Conserve MP"+6',}},
 		neck="Incanter's Torque",
 		waist="Luminary Sash",
@@ -301,10 +302,10 @@ function init_gear_sets()
 		--main="Raetic Rod +1",
 		--sub="Thuellaic Ecu +1",
 		ammo="Oreiad's Tathlum",
-		head="Ebers Cap +2", --+3
-		body="Ebers Bliaut +3", --+3
+		head="Ebers Cap +3",
+		body="Ebers Bliaut +3",
 		hands="Theophany Mitts +3",
-		legs="Ebers Pant. +2",  --+3
+		legs="Ebers Pant. +3",
 		feet={ name="Vanya Clogs", augments={'"Cure" potency +5%','"Cure" spellcasting time -15%','"Conserve MP"+6',}},
 		neck="Incanter's Torque",
 		waist="Luminary Sash",
@@ -313,7 +314,7 @@ function init_gear_sets()
 		right_ear="Glorious Earring",
 		left_ring="Naji's Loop",
 		right_ring="Ephedra Ring", 
-		--right_ring="Mephitas's Ring +1", -- needs augments
+		--right_ring="Mephitas's Ring +1", -- Lustreless Hide
 		back="Alaunus's Cape",
 }
 		
@@ -323,10 +324,10 @@ function init_gear_sets()
 		--main="Raetic Rod +1",
 		--sub="Thuellaic Ecu +1",
 		ammo="Oreiad's Tathlum",
-		head="Ebers Cap +2", --+3
-		body="Ebers Bliaut +3", --+3
+		head="Ebers Cap +3",
+		body="Ebers Bliaut +3",
 		hands="Theophany Mitts +3",
-		legs="Ebers Pant. +2",  --+3
+		legs="Ebers Pant. +3",
 		feet={ name="Vanya Clogs", augments={'"Cure" potency +5%','"Cure" spellcasting time -15%','"Conserve MP"+6',}},
 		neck="Incanter's Torque",
 		waist="Luminary Sash",
@@ -335,7 +336,7 @@ function init_gear_sets()
 		right_ear="Glorious Earring",
 		left_ring="Naji's Loop",
 		right_ring="Ephedra Ring", 
-		--right_ring="Mephitas's Ring +1", -- needs augments
+		--right_ring="Mephitas's Ring +1", -- Lustreless Hide
 		back="Alaunus's Cape",
 }
 		
@@ -345,10 +346,10 @@ function init_gear_sets()
 		--main="Raetic Rod +1",
 		--sub="Thuellaic Ecu +1",
 		ammo="Oreiad's Tathlum",
-		head="Ebers Cap +2", --+3
-		body="Ebers Bliaut +3", --+3
+		head="Ebers Cap +3",
+		body="Ebers Bliaut +3",
 		hands="Theophany Mitts +3",
-		legs="Ebers Pant. +2",  --+3
+		legs="Ebers Pant. +3",
 		feet={ name="Vanya Clogs", augments={'"Cure" potency +5%','"Cure" spellcasting time -15%','"Conserve MP"+6',}},
 		neck="Incanter's Torque",
 		waist="Luminary Sash",
@@ -357,7 +358,7 @@ function init_gear_sets()
 		right_ear="Glorious Earring",
 		left_ring="Naji's Loop",
 		right_ring="Ephedra Ring", 
-		--right_ring="Mephitas's Ring +1", -- needs augments
+		--right_ring="Mephitas's Ring +1", -- Lustreless Hide
 		back="Alaunus's Cape",
 }
 
@@ -367,10 +368,10 @@ function init_gear_sets()
 		--main="Raetic Rod +1",
 		--sub="Thuellaic Ecu +1",
 		ammo="Oreiad's Tathlum",
-		head="Ebers Cap +2", --+3
-		body="Ebers Bliaut +3", --+3
+		head="Ebers Cap +3",
+		body="Ebers Bliaut +3",
 		hands="Theophany Mitts +3",
-		legs="Ebers Pant. +2",  --+3
+		legs="Ebers Pant. +3",
 		feet={ name="Vanya Clogs", augments={'"Cure" potency +5%','"Cure" spellcasting time -15%','"Conserve MP"+6',}},
 		neck="Incanter's Torque",
 		waist="Luminary Sash",
@@ -379,7 +380,7 @@ function init_gear_sets()
 		right_ear="Glorious Earring",
 		left_ring="Naji's Loop",
 		right_ring="Ephedra Ring", 
-		--right_ring="Mephitas's Ring +1", -- needs augments
+		--right_ring="Mephitas's Ring +1", -- needs augments Lustreless Hide
 		back="Alaunus's Cape",
 }
 		
@@ -426,8 +427,7 @@ function init_gear_sets()
 	feet="Vanya Clogs",
 	neck="Malison Medallion",
 	waist="Bishop's Sash",
-	left_ear="Malignance Earring",
---		left_ear="Meili Earring",  --domain points
+	left_ear="Meili Earring",
 	right_ear="Ebers Earring +1",
 	left_ring="Prolix Ring",
 	right_ring="Kishar Ring",
@@ -442,9 +442,9 @@ function init_gear_sets()
     ammo="Pemphredo Tathlum",
     head={ name="Vanya Hood", augments={'MP+50','"Fast Cast"+10','Haste+2%',}},
     body="Ebers Bliaut +3",
-    hands="Ebers Mitts +2", --+3
-    legs="Ebers Pant. +2", --+3
-    feet="Ebers Duckbills +2", --+3
+    hands="Ebers Mitts +2",
+    legs="Ebers Pant. +3",
+    feet="Ebers Duckbills +3",
     neck="Voltsurge Torque",
 --	neck="Cleric's Torque +2",
     waist="Witful Belt",
@@ -452,7 +452,7 @@ function init_gear_sets()
     right_ear="Loquac. Earring",
     left_ring="Prolix Ring",
     right_ring="Kishar Ring",
-    back="Fi Follet Cape +1", --Augment - Vidmapire
+    back="Fi Follet Cape +1", --Augment Lustreless Hide
 }
 
     -- 110 total Enhancing Magic Skill; caps even without Light Arts
@@ -471,7 +471,7 @@ function init_gear_sets()
 		right_ear="Magnetic Earring",
 		left_ring="Prolix Ring",
 		right_ring="Kishar Ring",
-		back="Fi Follet Cape +1",--Augment - Vidmapire
+		back="Fi Follet Cape +1",--Augment Lustreless Hide
 }
 
 	sets.midcast.Haste = {
@@ -489,7 +489,7 @@ function init_gear_sets()
 		right_ear="Magnetic Earring",
 		left_ring="Prolix Ring",
 		right_ring="Kishar Ring",
-		back="Fi Follet Cape +1",--Augment - Vidmapire
+		back="Fi Follet Cape +1",--Augment Lustreless Hide
 }
 
 	sets.midcast.Stoneskin = set_combine(sets.midcast['Enhancing Magic'], {
@@ -498,7 +498,7 @@ function init_gear_sets()
 		neck="Nodens Gorget",
 })
 
-	sets.midcast.Auspice = set_combine(sets.midcast['Enhancing Magic'], {feet="Ebers Duckbills +2"})
+	sets.midcast.Auspice = set_combine(sets.midcast['Enhancing Magic'], {feet="Ebers Duckbills +3"})
 	
 	sets.midcast.Aquaveil = set_combine(sets.midcast['Enhancing Magic'], {
 	main="Vadose Rod",
@@ -523,12 +523,11 @@ function init_gear_sets()
     main="Beneficus",
     sub="Ammurapi Shield",
     ammo="Pemphredo Tathlum",
-    head="Ebers Cap +2",
+    head="Ebers Cap +3",
     body="Ebers Bliaut +3",
     hands="Ebers Mitts +2",
     legs={ name="Piety Pantaln. +2", augments={'Enhances "Afflatus Misery" effect',}},
-    feet="Theo. Duckbills +2",
-	--feet="Ebers Duckbills +2",
+    feet="Ebers Duckbills +3",
     neck="Incanter's Torque",
     waist="Embla Sash",
     left_ear="Andoaa Earring",
@@ -576,7 +575,7 @@ function init_gear_sets()
 		main="Daybreak",
 		sub="Ammurapi Shield",
 		ammo="Pemphredo Tathlum",
-		head="Ebers Cap +2", -- Theophany Cap +3
+		head="Ebers Cap +3", -- Theophany Cap +3
 		body="Theo. Bliaut +2",
 		hands="Bunzi's Gloves",
 		--hands="Regal Cuffs",
@@ -596,7 +595,7 @@ function init_gear_sets()
 		main="Daybreak",
 		sub="Ammurapi Shield",
 		ammo="Pemphredo Tathlum",
-		head="Ebers Cap +2", -- Theophany Cap +3
+		head="Ebers Cap +3", -- Theophany Cap +3
 		body="Theo. Bliaut +2",
 		hands="Bunzi's Gloves",
 		--hands="Regal Cuffs",
@@ -635,8 +634,8 @@ function init_gear_sets()
 		ammo="Homiliary",
 		body="Ebers Bliaut +3",
 		hands="Bunzi's Gloves",
-		legs="Ebers Pant. +2",
-		feet="Ebers Duckbills +2",
+		legs="Ebers Pant. +3",
+		feet="Ebers Duckbills +3",
 		waist="Cleric's Belt",
 		neck="Grandiose Chain",
 		left_ear="Relaxing Earring",
@@ -654,8 +653,8 @@ function init_gear_sets()
 		head="Bunzi's Hat",
 		body="Ebers Bliaut +3",
 		hands="Bunzi's Gloves",
-		legs="Ebers Pant. +2",
-		feet="Ebers Duckbills +2",
+		legs="Ebers Pant. +3",
+		feet="Ebers Duckbills +3",
 		neck="Loricate Torque +1",
 		waist="Plat. Mog. Belt",
 		left_ear="Etiolation Earring",
@@ -672,8 +671,8 @@ function init_gear_sets()
 		head="Bunzi's Hat",
 		body="Ebers Bliaut +3",
 		hands="Bunzi's Gloves",
-		legs="Ebers Pant. +2",
-		feet="Ebers Duckbills +2",
+		legs="Ebers Pant. +3",
+		feet="Ebers Duckbills +3",
 		neck="Loricate Torque +1",
 		waist="Plat. Mog. Belt",
 		left_ear="Etiolation Earring",
@@ -690,8 +689,8 @@ function init_gear_sets()
 		head="Bunzi's Hat",
 		body="Ebers Bliaut +3",
 		hands="Bunzi's Gloves",
-		legs="Ebers Pant. +2",
-		feet="Ebers Duckbills +2",
+		legs="Ebers Pant. +3",
+		feet="Ebers Duckbills +3",
 		neck="Loricate Torque +1",
 		waist="Plat. Mog. Belt",
 		left_ear="Etiolation Earring",
@@ -711,8 +710,8 @@ function init_gear_sets()
 		head="Bunzi's Hat",
 		body="Ebers Bliaut +3",
 		hands="Bunzi's Gloves",
-		legs="Ebers Pant. +2",
-		feet="Ebers Duckbills +2",
+		legs="Ebers Pant. +3",
+		feet="Ebers Duckbills +3",
 		neck="Loricate Torque +1",
 		waist="Plat. Mog. Belt",
 		left_ear="Etiolation Earring",
@@ -807,7 +806,7 @@ function init_gear_sets()
         --back="Kayapa Cape",waist="Shetal Stone",legs="Aya. Cosciales +2",feet="Aya. Gambieras +2"}
 
 		-- Buff sets: Gear that needs to be worn to actively enhance a current player buff.
-    sets.buff['Divine Caress'] = {hands="Orison Mitts +2",back="Mending Cape"}
+    sets.buff['Divine Caress'] = {hands="Ebers Mitts +3",back="Mending Cape"}
 
 	--sets.HPDown = {head="Pixie Hairpin +1",ear1="Mendicant's Earring",ear2="Evans Earring",
 		--body="Zendik Robe",hands="Hieros Mittens",ring1="Mephitas's Ring +1",ring2="Mephitas's Ring",
@@ -816,7 +815,7 @@ function init_gear_sets()
 	--sets.HPCure = {main="Queller Rod",sub="Ammurapi Shield",ammo="Pemphredo Tathlum",
 		--head="Blistering Sallet +1",neck="Nodens Gorget",ear1="Etiolation Earring",ear2="Ethereal Earring",
 		--body="Kaykaus Bliaut",hands="theophany mitts +3",ring1="Kunaji Ring",ring2="Meridian Ring",
-		--back="Alaunus's Cape",waist="Eschan Stone",legs="Ebers Pant. +2",feet="Kaykaus Boots"}
+		--back="Alaunus's Cape",waist="Eschan Stone",legs="Ebers Pant. +3",feet="Kaykaus Boots"}
 
 	sets.buff.Doom = set_combine(sets.buff.Doom, {})
 
