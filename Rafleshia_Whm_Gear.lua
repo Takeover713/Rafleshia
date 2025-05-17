@@ -77,7 +77,7 @@ function init_gear_sets()
     sets.precast.FC.StatusRemoval = sets.precast.FC['Healing Magic']
 
     sets.precast.FC.Cure = set_combine(sets.precast.FC['Healing Magic'], {
-		main="Queller Rod", --main="C. Palug hammer",
+		main="C. Palug hammer",
 		sub="Sors Shield",
 		ammo="Incantor Stone", --Impatiens
 		head="Piety Cap +2",
@@ -86,13 +86,13 @@ function init_gear_sets()
 		legs="Ebers Pant. +3",
 		feet="Regal Pumps +1",
 		neck="Voltsurge Torque",
-		--neck="Cleric's Torque +2",
+		neck="Cleric's Torque +2",
 		waist="Witful Belt",
 		left_ear="Nourish. Earring",
 		right_ear="Loquacious Earring",
 		left_ring="Prolix Ring",
 		right_ring="Kishar Ring",
-		back="Alaunus's Cape", --back={ name="Alaunus's Cape", augments={'"Fast Cast"+10',}},
+		back="Alaunus's Cape",
 })
 
     sets.precast.FC.Curaga = sets.precast.FC.Cure
@@ -149,7 +149,7 @@ function init_gear_sets()
 		hands="Fanatic Gloves",
 		--legs={ name="Lengo Pants", augments={'INT+5','Mag. Acc.+13',}},
 		feet="Regal Pumps +1",
-		neck="Voltsurge Torque", --neck="Cleric's Torque +2",
+		neck="Cleric's Torque +2",
 		waist="Witful Belt",
 		left_ear="Malignance Earring",
 		right_ear="Loquac. Earring",
@@ -165,136 +165,31 @@ function init_gear_sets()
 	sets.midcast.Cure = {
 		main={ name="Queller Rod", augments={'Healing magic skill +15','"Cure" potency +10%','"Cure" spellcasting time -7%',}}, 
 		--main="Raetic Rod +1",
-		sub="Sors Shield",
-		--sub="Thuellaic Ecu +1",
-		ammo="Oreiad's Tathlum", --Pemphredo Tathlum
+		sub="Sors Shield", --sub="Thuellaic Ecu +1",
+		ammo="Pemphredo Tathlum",
 		head="Ebers Cap +3",
 		body="Ebers Bliaut +3",
 		hands="Theophany Mitts +3",
 		legs="Ebers Pant. +3", 
-		feet={ name="Vanya Clogs", augments={'"Cure" potency +5%','"Cure" spellcasting time -15%','"Conserve MP"+6',}},
+		feet="Vanya Clogs", --Kaykaus Boots +1 D: Mag. Acc. +20,Cure Potency +6,Fast Cast +4%
 		neck="Incanter's Torque", 
-		--neck={ name="Clr. Torque +2", augments={'Path: A',}},
+		neck="Clr. Torque +2",
 		waist="Luminary Sash", 
-		--waist="Austerity Belt",
+		-- waist="Shinjutsu-no-obi +1", needs augments, Lustreless Scale
 		left_ear="Nourish. Earring",
 		right_ear="Glorious Earring",
 		left_ring="Naji's Loop",
 		right_ring="Ephedra Ring", 
-		--right_ring="Mephitas's Ring +1", -- needs augments
-		back="Alaunus's Cape", --MND+20','Mag. Acc+20 /Mag. Dmg.+20','MND+10','"Fast Cast"+10
-}
-		
-	sets.midcast.CureSolace = {
-		main={ name="Queller Rod", augments={'Healing magic skill +15','"Cure" potency +10%','"Cure" spellcasting time -7%',}}, 
-		--main="Raetic Rod +1",
-		sub="Sors Shield",
-		--sub="Thuellaic Ecu +1",
-		ammo="Oreiad's Tathlum", --Pemphredo Tathlum
-		head="Ebers Cap +3",
-		body="Ebers Bliaut +3",
-		hands="Theophany Mitts +3",
-		legs="Ebers Pant. +3",
-		feet={ name="Vanya Clogs", augments={'"Cure" potency +5%','"Cure" spellcasting time -15%','"Conserve MP"+6',}},
-		neck="Incanter's Torque", 
-		--neck={ name="Clr. Torque +2", augments={'Path: A',}},
-		waist="Luminary Sash", 
-		--waist="Austerity Belt",
-		left_ear="Nourish. Earring",
-		right_ear="Glorious Earring",
-		left_ring="Naji's Loop",
-		right_ring="Ephedra Ring", 
-		--right_ring="Mephitas's Ring +1", -- needs augments
+		--right_ring="Mephitas's Ring +1", needs augments, Lustreless Hide
 		back="Alaunus's Cape", --MND+20','Mag. Acc+20 /Mag. Dmg.+20','MND+10','"Fast Cast"+10
 }
 
-	sets.midcast.LightWeatherCure = {
-		main={ name="Queller Rod", augments={'Healing magic skill +15','"Cure" potency +10%','"Cure" spellcasting time -7%',}},
-		sub="Sors Shield",
-		--main="Raetic Rod +1",
-		--sub="Thuellaic Ecu +1",
-		ammo="Oreiad's Tathlum",
-		head="Ebers Cap +3",
-		body="Ebers Bliaut +3",
-		hands="Theophany Mitts +3",
-		legs="Ebers Pant. +3",
-		feet={ name="Vanya Clogs", augments={'"Cure" potency +5%','"Cure" spellcasting time -15%','"Conserve MP"+6',}},
-		neck="Incanter's Torque",
-		waist="Luminary Sash",
-		-- waist="Shinjutsu-no-obi +1",
-		left_ear="Nourish. Earring",
-		right_ear="Glorious Earring",
-		left_ring="Naji's Loop",
-		right_ring="Ephedra Ring", 
-		--right_ring="Mephitas's Ring +1", -- needs augments
-		back="Alaunus's Cape",
-}
-
-	sets.midcast.LightWeatherCureSolace = {
-		main={ name="Queller Rod", augments={'Healing magic skill +15','"Cure" potency +10%','"Cure" spellcasting time -7%',}},
-		sub="Sors Shield",
-		--main="Raetic Rod +1",
-		--sub="Thuellaic Ecu +1",
-		ammo="Oreiad's Tathlum",
-		head="Ebers Cap +3",
-		body="Ebers Bliaut +3",
-		hands="Theophany Mitts +3",
-		legs="Ebers Pant. +3",
-		feet={ name="Vanya Clogs", augments={'"Cure" potency +5%','"Cure" spellcasting time -15%','"Conserve MP"+6',}},
-		neck="Incanter's Torque",
-		waist="Luminary Sash",
-		-- waist="Shinjutsu-no-obi +1",
-		left_ear="Nourish. Earring",
-		right_ear="Glorious Earring",
-		left_ring="Naji's Loop",
-		right_ring="Ephedra Ring", 
-		--right_ring="Mephitas's Ring +1", -- needs augments
-		back="Alaunus's Cape",
-}
-		
-	sets.midcast.LightDayCureSolace = {
-		main={ name="Queller Rod", augments={'Healing magic skill +15','"Cure" potency +10%','"Cure" spellcasting time -7%',}},
-		sub="Sors Shield",
-		--main="Raetic Rod +1",
-		--sub="Thuellaic Ecu +1",
-		ammo="Oreiad's Tathlum",
-		head="Ebers Cap +3",
-		body="Ebers Bliaut +3",
-		hands="Theophany Mitts +3",
-		legs="Ebers Pant. +3",
-		feet={ name="Vanya Clogs", augments={'"Cure" potency +5%','"Cure" spellcasting time -15%','"Conserve MP"+6',}},
-		neck="Incanter's Torque",
-		waist="Luminary Sash",
-		-- waist="Shinjutsu-no-obi +1",
-		left_ear="Nourish. Earring",
-		right_ear="Glorious Earring",
-		left_ring="Naji's Loop",
-		right_ring="Ephedra Ring", 
-		--right_ring="Mephitas's Ring +1", -- needs augments
-		back="Alaunus's Cape",
-}
-
-	sets.midcast.LightDayCure = {
-		main={ name="Queller Rod", augments={'Healing magic skill +15','"Cure" potency +10%','"Cure" spellcasting time -7%',}},
-		sub="Sors Shield",
-		--main="Raetic Rod +1",
-		--sub="Thuellaic Ecu +1",
-		ammo="Oreiad's Tathlum",
-		head="Ebers Cap +3",
-		body="Ebers Bliaut +3",
-		hands="Theophany Mitts +3",
-		legs="Ebers Pant. +3",
-		feet={ name="Vanya Clogs", augments={'"Cure" potency +5%','"Cure" spellcasting time -15%','"Conserve MP"+6',}},
-		neck="Incanter's Torque",
-		waist="Luminary Sash",
-		-- waist="Shinjutsu-no-obi +1",
-		left_ear="Nourish. Earring",
-		right_ear="Glorious Earring",
-		left_ring="Naji's Loop",
-		right_ring="Ephedra Ring", 
-		--right_ring="Mephitas's Ring +1", -- needs augments
-		back="Alaunus's Cape",
-}
+	sets.midcast.CureSolace = set_combine(sets.midcast.Cure,{})
+	sets.midcast.LightWeatherCure = set_combine(sets.midcast.Cure,{})
+	sets.midcast.LightWeatherCureSolace = set_combine(sets.midcast.Cure,{})
+	sets.midcast.LightDayCureSolace = set_combine(sets.midcast.Cure,{})
+	sets.midcast.LightDayCure = set_combine(sets.midcast.Cure,{})
+	sets.midcast.Cure.DT = set_combine(sets.midcast.Cure,{})
 
 	sets.midcast.Curaga = {
 		main={ name="Queller Rod", augments={'Healing magic skill +15','"Cure" potency +10%','"Cure" spellcasting time -7%',}},
@@ -309,80 +204,18 @@ function init_gear_sets()
 		feet={ name="Vanya Clogs", augments={'"Cure" potency +5%','"Cure" spellcasting time -15%','"Conserve MP"+6',}},
 		neck="Incanter's Torque",
 		waist="Luminary Sash",
-		-- waist="Shinjutsu-no-obi +1",
+		-- waist="Shinjutsu-no-obi +1", --needs augments, Lustreless Scale
 		left_ear="Nourish. Earring",
 		right_ear="Glorious Earring",
 		left_ring="Naji's Loop",
 		right_ring="Ephedra Ring", 
-		--right_ring="Mephitas's Ring +1", -- Lustreless Hide
-		back="Alaunus's Cape",
+		--right_ring="Mephitas's Ring +1", --needs augments, Lustreless Hide
+		back="Alaunus's Cape", 
+		-- back={ name="Mending Cape", augments={'Healing magic skill +4','Enha.mag. skill +1','Mag. Acc.+5','"Cure" potency +4%',}},
 }
 		
-	sets.midcast.LightWeatherCuraga = {
-		main={ name="Queller Rod", augments={'Healing magic skill +15','"Cure" potency +10%','"Cure" spellcasting time -7%',}},
-		sub="Sors Shield",
-		--main="Raetic Rod +1",
-		--sub="Thuellaic Ecu +1",
-		ammo="Oreiad's Tathlum",
-		head="Ebers Cap +3",
-		body="Ebers Bliaut +3",
-		hands="Theophany Mitts +3",
-		legs="Ebers Pant. +3",
-		feet={ name="Vanya Clogs", augments={'"Cure" potency +5%','"Cure" spellcasting time -15%','"Conserve MP"+6',}},
-		neck="Incanter's Torque",
-		waist="Luminary Sash",
-		-- waist="Shinjutsu-no-obi +1",
-		left_ear="Nourish. Earring",
-		right_ear="Glorious Earring",
-		left_ring="Naji's Loop",
-		right_ring="Ephedra Ring", 
-		--right_ring="Mephitas's Ring +1", -- Lustreless Hide
-		back="Alaunus's Cape",
-}
-		
-	sets.midcast.LightDayCuraga = {
-		main={ name="Queller Rod", augments={'Healing magic skill +15','"Cure" potency +10%','"Cure" spellcasting time -7%',}},
-		sub="Sors Shield",
-		--main="Raetic Rod +1",
-		--sub="Thuellaic Ecu +1",
-		ammo="Oreiad's Tathlum",
-		head="Ebers Cap +3",
-		body="Ebers Bliaut +3",
-		hands="Theophany Mitts +3",
-		legs="Ebers Pant. +3",
-		feet={ name="Vanya Clogs", augments={'"Cure" potency +5%','"Cure" spellcasting time -15%','"Conserve MP"+6',}},
-		neck="Incanter's Torque",
-		waist="Luminary Sash",
-		-- waist="Shinjutsu-no-obi +1",
-		left_ear="Nourish. Earring",
-		right_ear="Glorious Earring",
-		left_ring="Naji's Loop",
-		right_ring="Ephedra Ring", 
-		--right_ring="Mephitas's Ring +1", -- Lustreless Hide
-		back="Alaunus's Cape",
-}
-
-	sets.midcast.Cure.DT = {
-		main={ name="Queller Rod", augments={'Healing magic skill +15','"Cure" potency +10%','"Cure" spellcasting time -7%',}},
-		sub="Sors Shield",
-		--main="Raetic Rod +1",
-		--sub="Thuellaic Ecu +1",
-		ammo="Oreiad's Tathlum",
-		head="Ebers Cap +3",
-		body="Ebers Bliaut +3",
-		hands="Theophany Mitts +3",
-		legs="Ebers Pant. +3",
-		feet={ name="Vanya Clogs", augments={'"Cure" potency +5%','"Cure" spellcasting time -15%','"Conserve MP"+6',}},
-		neck="Incanter's Torque",
-		waist="Luminary Sash",
-		-- waist="Shinjutsu-no-obi +1",
-		left_ear="Nourish. Earring",
-		right_ear="Glorious Earring",
-		left_ring="Naji's Loop",
-		right_ring="Ephedra Ring", 
-		--right_ring="Mephitas's Ring +1", -- needs augments Lustreless Hide
-		back="Alaunus's Cape",
-}
+	sets.midcast.LightWeatherCuraga = set_combine(sets.midcast.Curaga,{})
+	sets.midcast.LightDayCuraga = set_combine(sets.midcast.Curaga,{})
 		
 	--Melee Curesets are used whenever your Weapons state is set to anything but None.
 	sets.midcast.MeleeCure = {}
@@ -431,8 +264,8 @@ function init_gear_sets()
 	right_ear="Ebers Earring +1",
 	left_ring="Prolix Ring",
 	right_ring="Kishar Ring",
-	--left_ring="Menelaus's Ring",
-	--right_ring="Haoma's Ring",
+	left_ring="Menelaus's Ring",
+	right_ring="Haoma's Ring",
 	back="Alaunus's Cape",
 }
 
@@ -442,11 +275,11 @@ function init_gear_sets()
     ammo="Pemphredo Tathlum",
     head={ name="Vanya Hood", augments={'MP+50','"Fast Cast"+10','Haste+2%',}},
     body="Ebers Bliaut +3",
-    hands="Ebers Mitts +2",
+    hands="Ebers Mitts +3",
     legs="Ebers Pant. +3",
     feet="Ebers Duckbills +3",
     neck="Voltsurge Torque",
---	neck="Cleric's Torque +2",
+	neck="Cleric's Torque +2",
     waist="Witful Belt",
     left_ear="Magnetic Earring",
     right_ear="Loquac. Earring",
@@ -501,17 +334,17 @@ function init_gear_sets()
 	sets.midcast.Auspice = set_combine(sets.midcast['Enhancing Magic'], {feet="Ebers Duckbills +3"})
 	
 	sets.midcast.Aquaveil = set_combine(sets.midcast['Enhancing Magic'], {
-	main="Vadose Rod",
-	head="Chironic Hat",
-	hands="Regal Cuffs",
+		main="Vadose Rod",
+		head="Chironic Hat",
+		hands="Regal Cuffs",
 })
 
 	sets.midcast.Regen = set_combine(sets.midcast['Enhancing Magic'], {
-	main="Bolelabunga",
-	head="Inyanga Tiara +2",
-	hands="Ebers Mitts +2",
-	body="Piety Bliaut +3",
-	legs="Th. Pant. +3"})
+		main="Bolelabunga",
+		head="Inyanga Tiara +2",
+		hands="Ebers Mitts +3",
+		body="Piety Bliaut +3",
+		legs="Th. Pant. +3"})
 	
 	sets.midcast.Protect = set_combine(sets.midcast['Enhancing Magic'], {ring2="Sheltered Ring",feet="Piety Duckbills +2",ear1="Gifted Earring",waist="Sekhmet Corset"})
 	sets.midcast.Protectra = set_combine(sets.midcast['Enhancing Magic'], {ring2="Sheltered Ring",feet="Piety Duckbills +2",ear1="Gifted Earring",waist="Sekhmet Corset"})
@@ -520,21 +353,21 @@ function init_gear_sets()
 	
 	
 	sets.midcast.BarElement = {
-    main="Beneficus",
-    sub="Ammurapi Shield",
-    ammo="Pemphredo Tathlum",
-    head="Ebers Cap +3",
-    body="Ebers Bliaut +3",
-    hands="Ebers Mitts +2",
-    legs={ name="Piety Pantaln. +2", augments={'Enhances "Afflatus Misery" effect',}},
-    feet="Ebers Duckbills +3",
-    neck="Incanter's Torque",
-    waist="Embla Sash",
-    left_ear="Andoaa Earring",
-    right_ear="Magnetic Earring",
-    left_ring="Defending Ring",
-    right_ring="Stikini Ring +1",
-    back="Fi Follet Cape +1",
+		main="Beneficus",
+		sub="Ammurapi Shield",
+		ammo="Pemphredo Tathlum",
+		head="Ebers Cap +3",
+		body="Ebers Bliaut +3",
+		hands="Ebers Mitts +3",
+		legs={ name="Piety Pantaln. +2", augments={'Enhances "Afflatus Misery" effect',}},
+		feet="Ebers Duckbills +3",
+		neck="Incanter's Torque",
+		waist="Embla Sash",
+		left_ear="Andoaa Earring",
+		right_ear="Magnetic Earring",
+		left_ring="Defending Ring",
+		right_ring="Stikini Ring +1",
+		back="Fi Follet Cape +1",
 }
 
 	sets.midcast.Impact = {}
