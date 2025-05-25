@@ -44,7 +44,7 @@ function init_gear_sets()
 	
 	-- Weapons sets --
 	sets.weapons.Gletis = {main="Gleti's Knife",sub={ name="Fusetto +2", augments={'TP Bonus +1000',}},}
-	sets.weapons.Trials = {main="Peeler",sub="Empty"}
+	sets.weapons.Trials = {main="Kartika",sub="Empty"}
 	
 	------------------------------
 	  ------ Idle sets ------
@@ -275,20 +275,22 @@ end
 function select_default_macro_book()
     -- Default macro set/book
     if player.sub_job == 'WAR' then
-        set_macro_page(19, 1)
+        set_macro_page(1, 19)
     elseif player.sub_job == 'NIN' then
-        set_macro_page(19, 1)
+        set_macro_page(1, 19)
     elseif player.sub_job == 'SAM' then
-        set_macro_page(19, 1)
+        set_macro_page(1, 19)
     elseif player.sub_job == 'THF' then
-        set_macro_page(19, 1)
+        set_macro_page(1, 19)
     else
-        set_macro_page(19, 1)
+        set_macro_page(1, 19)
     end
 end
 
 function sub_job_change(new,old)
 send_command('wait 5;input /lockstyleset 12')
 end
+
+send_command('wait 5;input /lockstyleset 20')
 
 send_command('exec init.txt')
