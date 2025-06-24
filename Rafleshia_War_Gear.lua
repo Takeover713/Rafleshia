@@ -110,7 +110,7 @@ function init_gear_sets()
 	-- Default set for any weaponskill that isn't any more specifically defined
     sets.precast.WS = {
 	ammo="Knobkierrie",
-    head={ name="Agoge Mask +3", augments={'Enhances "Savagery" effect',}},
+    head={ name="Agoge Mask +4", augments={'Enhances "Savagery" effect',}},
     body={ name="Sakpata's Plate", augments={'Path: A',}},
     hands={ name="Sakpata's Gauntlets", augments={'Path: A',}},
     legs="Boii Cuisses +3",
@@ -132,7 +132,7 @@ function init_gear_sets()
     -- Specific weaponskill sets.  Uses the base set if an appropriate WSMod version isn't found.	
     sets.precast.WS['Savage Blade'] = set_combine(sets.precast.WS, {
 	ammo="Knobkierrie",
-    head={ name="Agoge Mask +3", augments={'Enhances "Savagery" effect',}},
+    head={ name="Agoge Mask +4", augments={'Enhances "Savagery" effect',}},
     body={ name="Sakpata's Plate", augments={'Path: A',}},
     hands={ name="Sakpata's Gauntlets", augments={'Path: A',}},
     legs="Boii Cuisses +3",
@@ -147,7 +147,7 @@ function init_gear_sets()
 	})
     sets.precast.WS['Savage Blade'].SomeAcc = set_combine(sets.precast.WS.SomeAcc, {
 	ammo="Knobkierrie",
-    head={ name="Agoge Mask +3", augments={'Enhances "Savagery" effect',}},
+    head={ name="Agoge Mask +4", augments={'Enhances "Savagery" effect',}},
     body={ name="Sakpata's Plate", augments={'Path: A',}},
     hands={ name="Sakpata's Gauntlets", augments={'Path: A',}},
     legs="Boii Cuisses +3",
@@ -162,7 +162,7 @@ function init_gear_sets()
 	})
     sets.precast.WS['Savage Blade'].Acc = set_combine(sets.precast.WS.Acc, {
 	ammo="Knobkierrie",
-    head={ name="Agoge Mask +3", augments={'Enhances "Savagery" effect',}},
+    head={ name="Agoge Mask +4", augments={'Enhances "Savagery" effect',}},
     body={ name="Sakpata's Plate", augments={'Path: A',}},
     hands={ name="Sakpata's Gauntlets", augments={'Path: A',}},
     legs="Boii Cuisses +3",
@@ -177,7 +177,7 @@ function init_gear_sets()
 	})
     sets.precast.WS['Savage Blade'].FullAcc = set_combine(sets.precast.WS.FullAcc, {
 	ammo="Knobkierrie",
-    head={ name="Agoge Mask +3", augments={'Enhances "Savagery" effect',}},
+    head={ name="Agoge Mask +4", augments={'Enhances "Savagery" effect',}},
     body={ name="Sakpata's Plate", augments={'Path: A',}},
     hands={ name="Sakpata's Gauntlets", augments={'Path: A',}},
     legs="Boii Cuisses +3",
@@ -192,7 +192,7 @@ function init_gear_sets()
 	})
     sets.precast.WS['Savage Blade'].Fodder = set_combine(sets.precast.WS.Fodder, {
 	ammo="Knobkierrie",
-    head={ name="Agoge Mask +3", augments={'Enhances "Savagery" effect',}},
+    head={ name="Agoge Mask +4", augments={'Enhances "Savagery" effect',}},
     body={ name="Sakpata's Plate", augments={'Path: A',}},
     hands={ name="Sakpata's Gauntlets", augments={'Path: A',}},
     legs="Boii Cuisses +3",
@@ -208,7 +208,7 @@ function init_gear_sets()
 
     sets.precast.WS['Upheaval'] = set_combine(sets.precast.WS, {
 	ammo="Knobkierrie",
-    head={ name="Sakpata's Helm", augments={'Path: A',}},
+    head={ name="Agoge Mask +4", augments={'Enhances "Savagery" effect',}},
     body={ name="Sakpata's Plate", augments={'Path: A',}},
     hands={ name="Sakpata's Gauntlets", augments={'Path: A',}},
     legs="Boii Cuisses +3",
@@ -223,7 +223,7 @@ function init_gear_sets()
 	})
     sets.precast.WS['Upheaval'].SomeAcc = set_combine(sets.precast.WS.SomeAcc, {
 	ammo="Knobkierrie",
-    head={ name="Sakpata's Helm", augments={'Path: A',}},
+    head={ name="Agoge Mask +4", augments={'Enhances "Savagery" effect',}},
     body={ name="Sakpata's Plate", augments={'Path: A',}},
     hands={ name="Sakpata's Gauntlets", augments={'Path: A',}},
     legs="Boii Cuisses +3",
@@ -238,7 +238,7 @@ function init_gear_sets()
 	})
     sets.precast.WS['Upheaval'].Acc = set_combine(sets.precast.WS.Acc, {
 	ammo="Knobkierrie",
-    head={ name="Sakpata's Helm", augments={'Path: A',}},
+    head={ name="Agoge Mask +4", augments={'Enhances "Savagery" effect',}},
     body={ name="Sakpata's Plate", augments={'Path: A',}},
     hands={ name="Sakpata's Gauntlets", augments={'Path: A',}},
     legs="Boii Cuisses +3",
@@ -253,7 +253,7 @@ function init_gear_sets()
 	})
     sets.precast.WS['Upheaval'].FullAcc = set_combine(sets.precast.WS.FullAcc, {
 	ammo="Knobkierrie",
-    head={ name="Sakpata's Helm", augments={'Path: A',}},
+    head={ name="Agoge Mask +4", augments={'Enhances "Savagery" effect',}},
     body={ name="Sakpata's Plate", augments={'Path: A',}},
     hands={ name="Sakpata's Gauntlets", augments={'Path: A',}},
     legs="Boii Cuisses +3",
@@ -268,7 +268,7 @@ function init_gear_sets()
 	})
     sets.precast.WS['Upheaval'].Fodder = set_combine(sets.precast.WS.Fodder, {
 	ammo="Knobkierrie",
-    head={ name="Sakpata's Helm", augments={'Path: A',}},
+	head={ name="Agoge Mask +4", augments={'Enhances "Savagery" effect',}},
     body={ name="Sakpata's Plate", augments={'Path: A',}},
     hands={ name="Sakpata's Gauntlets", augments={'Path: A',}},
     legs="Boii Cuisses +3",
