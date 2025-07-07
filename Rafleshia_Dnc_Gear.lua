@@ -44,7 +44,7 @@ function init_gear_sets()
 	
 	-- Weapons sets --
 	sets.weapons.Gletis = {main="Gleti's Knife",sub={ name="Fusetto +2", augments={'TP Bonus +1000',}},}
-	sets.weapons.Trials = {main="Kartika",sub="Empty"}
+	sets.weapons.Trials = {main="Twashtar",sub="Empty"}
 	
 	------------------------------
 	  ------ Idle sets ------
@@ -85,12 +85,12 @@ function init_gear_sets()
 		hands="Malignance Gloves",
 		legs="Gleti's Breeches",
 		feet="Malignance Boots",
-		--neck="Etoile Gorget +2",
+		neck="Etoile Gorget +2",
 		waist="Windbuffet Belt +1",
 		left_ear="Sherida Earring",
 		right_ear="Brutal Earring",
 		left_ring="Epona's Ring",
-		right_ring="Chirich Ring +1", --Moonlight +1
+		right_ring="Moonlight Ring",
 		back={ name="Senuna's Mantle", augments={'DEX+20','Accuracy+20 Attack+20','DEX+10','"Store TP"+10','Phys. dmg. taken-10%',}},
 }
 
@@ -106,16 +106,16 @@ function init_gear_sets()
 	
     sets.precast.WS = {
 		ammo="Crepuscular Pebble",
-		head="Maculele Tiara +1", --"Maculele Tiara +3",
+		head="Maculele Tiara +3",
 		body="Gleti's Cuirass", --Needs RP
 		hands={ name="Nyame Gauntlets", augments={'Path: B',}}, --Maxixi Bangles +3
 		legs={ name="Nyame Flanchard", augments={'Path: B',}},
 		feet={ name="Nyame Sollerets", augments={'Path: B',}},
-		neck="Fotia Gorget", --"Etoile Gorget +2",
+		neck="Etoile Gorget +2",
 		waist="Kentarch Belt +1",
 		left_ear={ name="Moonshade Earring", augments={'Accuracy+4','TP Bonus +250',}},
-		right_ear="Brutal Earring", --Macu. Earring +1
-		left_ring="Epaminondas's Ring",
+		right_ear="Macu. Earring +1",
+		left_ring="Ephramad's Ring",
 		right_ring="Regal Ring",
 		back={ name="Senuna's Mantle", augments={'DEX+20','Accuracy+20 Attack+20','DEX+10','Weapon skill damage +10%','Phys. dmg. taken-2%',}},
 }
@@ -126,16 +126,16 @@ function init_gear_sets()
     -- Specific weaponskill sets.  Uses the base set if an appropriate WSMod version isn't found.
     sets.precast.WS["Rudra's Storm"] = set_combine(sets.precast.WS, {
 		ammo="Crepuscular Pebble",
-		head="Maculele Tiara +1", --"Maculele Tiara +3",
-		body="Gleti's Cuirass", --Needs augment
-		hands={ name="Nyame Gauntlets", augments={'Path: B',}}, --Maxixi Bangles +3
+		head="Maculele Tiara +3",
+		body="Gleti's Cuirass",
+		hands={ name="Nyame Gauntlets", augments={'Path: B',}},
 		legs={ name="Nyame Flanchard", augments={'Path: B',}},
 		feet={ name="Nyame Sollerets", augments={'Path: B',}},
-		neck="Fotia Gorget", --"Etoile Gorget +2",
-		waist="Kentarch Belt +1",
+		neck={ name="Etoile Gorget +2", augments={'Path: A',}},
+		waist={ name="Kentarch Belt +1", augments={'Path: A',}},
 		left_ear={ name="Moonshade Earring", augments={'Accuracy+4','TP Bonus +250',}},
-		right_ear="Brutal Earring", --Macu. Earring +1
-		left_ring="Epaminondas's Ring",
+		right_ear={ name="Macu. Earring +1", augments={'System: 1 ID: 1676 Val: 0','Accuracy+11','Mag. Acc.+11','"Store TP"+3',}},
+		left_ring="Ephramad's Ring",
 		right_ring="Regal Ring",
 		back={ name="Senuna's Mantle", augments={'DEX+20','Accuracy+20 Attack+20','DEX+10','Weapon skill damage +10%','Phys. dmg. taken-2%',}},
 })
@@ -243,7 +243,7 @@ function init_gear_sets()
     sets.precast.Flourish1['Animated Flourish'] = sets.Enmity
     sets.precast.Flourish1['Desperate Flourish'] = {}
     sets.precast.Flourish2 = {}
-    sets.precast.Flourish2['Reverse Flourish'] = {hands="Macu. Bangles +1",
+    sets.precast.Flourish2['Reverse Flourish'] = {hands="Maculele Bangles +3",
 		back="Toetapper Mantle" -- • Cape: Reverse Flourish 10-30
 }
 
