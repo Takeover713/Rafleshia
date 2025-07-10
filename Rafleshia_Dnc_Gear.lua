@@ -7,7 +7,7 @@ function user_setup()
     state.PhysicalDefenseMode:options('PDT')
 	state.MagicalDefenseMode:options('MDT')
 	state.ResistDefenseMode:options('MEVA')
-	state.Weapons:options('Gletis','Trials')
+	state.Weapons:options('Gletis','Prime','Trials')
 
     -- Additional local binds
     send_command('bind @` gs c step')
@@ -44,6 +44,7 @@ function init_gear_sets()
 	
 	-- Weapons sets --
 	sets.weapons.Gletis = {main="Gleti's Knife",sub={ name="Fusetto +2", augments={'TP Bonus +1000',}},}
+	sets.weapons.Prime = {main="Mpu Gandring",sub="Fusetto +2"}
 	sets.weapons.Trials = {main="Twashtar",sub="Empty"}
 	
 	------------------------------
@@ -86,9 +87,9 @@ function init_gear_sets()
 		legs="Gleti's Breeches",
 		feet="Malignance Boots",
 		neck="Etoile Gorget +2",
-		waist="Windbuffet Belt +1",
+		waist="Reiki Yotai",
 		left_ear="Sherida Earring",
-		right_ear="Brutal Earring",
+		right_ear="Telos Earring",
 		left_ring="Epona's Ring",
 		right_ring="Moonlight Ring",
 		back={ name="Senuna's Mantle", augments={'DEX+20','Accuracy+20 Attack+20','DEX+10','"Store TP"+10','Phys. dmg. taken-10%',}},
@@ -143,7 +144,21 @@ function init_gear_sets()
     sets.precast.WS["Rudra's Storm"].SomeAcc = set_combine(sets.precast.WS.SomeAcc, {})
     sets.precast.WS["Rudra's Storm"].Acc = set_combine(sets.precast.WS.Acc, {})
 	
-    sets.precast.WS["Shark Bite"] = set_combine(sets.precast.WS, {})
+    sets.precast.WS["Shark Bite"] = set_combine(sets.precast.WS, {
+		ammo="Crepuscular Pebble",
+		head="Maculele Tiara +3",
+		body="Gleti's Cuirass", --Needs RP
+		hands="Gleti's gauntlets",
+		legs="Gleti's breeches",
+		feet={ name="Nyame Sollerets", augments={'Path: B',}},
+		neck="Etoile Gorget +2",
+		waist="Sailfi belt +1",
+		left_ear={ name="Moonshade Earring", augments={'Accuracy+4','TP Bonus +250',}},
+		right_ear="Macu. Earring +1",
+		left_ring="Ephramad's Ring",
+		right_ring="Regal Ring",
+		back={ name="Senuna's Mantle", augments={'DEX+20','Accuracy+20 Attack+20','DEX+10','Weapon skill damage +10%','Phys. dmg. taken-2%',}},
+	})
     sets.precast.WS["Shark Bite"].SomeAcc = set_combine(sets.precast.WS.SomeAcc, {})
     sets.precast.WS["Shark Bite"].Acc = set_combine(sets.precast.WS.Acc, {})
 	
@@ -197,12 +212,21 @@ function init_gear_sets()
     
     -- Precast sets to enhance JAs
 
-    sets.precast.JA['No Foot Rise'] = {}
+    sets.precast.JA['No Foot Rise'] = {body="Horos Casaque +1"}
     sets.precast.JA['Trance'] = {}
     
 
     -- Waltz set (chr and vit)
-		sets.precast.Waltz = {}
+		sets.precast.Waltz = {
+		ammo="Yamarang",
+		neck="Etoile Gorget +2",
+		ear2="Handler's Earring +1", --R15
+		body="Maxixi Casaque +3",
+		back="Toetapper Mantle",
+		waist="Aristo Belt",
+		legs="Dashing Subligar",
+		feet="Maxixi Toe Shoes +3"
+		}
 		sets.Self_Waltz = {}
         
     -- Don't need any special gear for Healing Waltz.
