@@ -21,6 +21,8 @@ function user_setup()
 	send_command('bind !backspace input /ja "Reverse Flourish" <me>')
 	send_command('bind ^backspace input /ja "No Foot Rise" <me>')
 	send_command('bind %~` gs c cycle SkillchainMode')
+	
+	trust_list = {"Joachim","Ulmia","Qultada","Apururu (UC)","Selh'teus"}
 
     select_default_macro_book()
 end
@@ -52,19 +54,19 @@ function init_gear_sets()
 	------------------------------
     
 	sets.idle = {
-		ammo="Staunch Tathlum +1",
+		 ammo="Staunch Tathlum +1",
 		head="Null Masque",
-		body="Malignance Tabard",
-		hands="Nyame Gauntlets",
-		legs="Malignance Tights",
-		feet="Malignance Boots",
+		body="Gleti's Cuirass",
+		hands="Gleti's Gauntlets",
+		legs="Gleti's Breeches",
+		feet="Gleti's Boots",
 		neck="Loricate Torque +1",
 		waist="Plat. Mog. Belt",
-		left_ear="Hearty Earring",
+		left_ear="Eabani Earring",
 		right_ear="Etiolation Earring",
 		left_ring="Defending Ring",
 		right_ring="Chirich Ring +1",
-		back="Solemnity Cape"
+		back="Solemnity Cape",
 }
 
 	------------------------------
@@ -213,7 +215,7 @@ function init_gear_sets()
     -- Precast sets to enhance JAs
 
     sets.precast.JA['No Foot Rise'] = {body="Horos Casaque +1"}
-    sets.precast.JA['Trance'] = {}
+    sets.precast.JA['Trance'] = {head="Horos Tiara +1"}
     
 
     -- Waltz set (chr and vit)
@@ -250,7 +252,7 @@ function init_gear_sets()
 		back="Senuna's Mantle",}
 
     sets.precast.Jig = {
-		legs="Horos Tights +3",
+		legs="Horos Tights +1",
 		feet="Maxixi Toe Shoes +3",}
 
     sets.precast.Step = {
@@ -267,9 +269,7 @@ function init_gear_sets()
     sets.precast.Flourish1['Animated Flourish'] = sets.Enmity
     sets.precast.Flourish1['Desperate Flourish'] = {}
     sets.precast.Flourish2 = {}
-    sets.precast.Flourish2['Reverse Flourish'] = {hands="Maculele Bangles +3",
-		back="Toetapper Mantle" -- • Cape: Reverse Flourish 10-30
-}
+    sets.precast.Flourish2['Reverse Flourish'] = {hands="Maculele Bangles +3",back="Toetapper Mantle"}
 
     sets.precast.Flourish3 = {}
     sets.precast.Flourish3['Striking Flourish'] = {}
@@ -280,7 +280,14 @@ function init_gear_sets()
 	------------------------------
     -- Fast cast sets for spells
     
-    sets.precast.FC = {}
+    sets.precast.FC = {
+	ammo="Sapience Orb",
+    body="Taeon Tabard",
+    hands={ name="Leyline Gloves", augments={'Accuracy+14','Mag. Acc.+13','"Mag.Atk.Bns."+13','"Fast Cast"+2',}},
+    neck="Voltsurge Torque",
+    left_ear="Loquac. Earring",
+    right_ear="Etiolation Earring",
+    left_ring="Prolix Ring",}
 
     sets.precast.FC.Utsusemi = set_combine(sets.precast.FC, {neck="Magoraga Beads"})
 	
@@ -290,7 +297,7 @@ function init_gear_sets()
     -- Buff sets: Gear that needs to be worn to actively enhance a current player buff.
 	
     sets.buff['Saber Dance'] = {} --legs="Horos Tights"
-    sets.buff['Climactic Flourish'] = {ammo="Charis Feather",head="Adhemar Bonnet +1",body="Meg. Cuirie +2"} --head="Charis Tiara +2"
+    sets.buff['Climactic Flourish'] = {} --head="Charis Tiara +2"
 	sets.buff.Doom = set_combine(sets.buff.Doom, {})
 	sets.buff.Sleep = {head="Frenzy Sallet"}
 end
