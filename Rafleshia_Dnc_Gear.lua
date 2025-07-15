@@ -282,7 +282,7 @@ function init_gear_sets()
     
     sets.precast.FC = {
 	ammo="Sapience Orb",
-    body="Taeon Tabard",
+    body="Dread Jupon",
     hands={ name="Leyline Gloves", augments={'Accuracy+14','Mag. Acc.+13','"Mag.Atk.Bns."+13','"Fast Cast"+2',}},
     neck="Voltsurge Torque",
     left_ear="Loquac. Earring",
