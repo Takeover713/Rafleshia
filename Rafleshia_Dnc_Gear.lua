@@ -204,7 +204,7 @@ function init_gear_sets()
     sets.defense.MDT = {}
 	sets.defense.MEVA = {}
 
-    sets.Kiting = {}
+    sets.Kiting = {feet="Tandava Crackows"}
  
 	sets.TreasureHunter = set_combine(sets.TreasureHunter, {})
 	
