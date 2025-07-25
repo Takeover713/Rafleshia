@@ -1,6 +1,6 @@
 -- Setup vars that are user-dependent.  Can override this function in a sidecar file.
 function user_setup()
-    state.OffenseMode:options('Normal','SomeAcc','Acc')
+    state.OffenseMode:options('Normal','SomeAcc','Acc','Aminon')
     state.HybridMode:options('Normal','DTLite','PDT')
     state.WeaponskillMode:options('Match','Normal','SomeAcc','Acc')
 	state.IdleMode:options('Normal')
@@ -97,6 +97,22 @@ function init_gear_sets()
 		back={ name="Senuna's Mantle", augments={'DEX+20','Accuracy+20 Attack+20','DEX+10','"Store TP"+10','Phys. dmg. taken-10%',}},
 }
 
+	sets.engaged.Aminon = {
+		ammo="Staunch Tathlum +1",
+		head="Turms Cap +1",
+		body="Gleti's Cuirass",
+		hands="Gleti's Gauntlets",
+		legs="Gleti's Breeches",
+		feet="Gleti's Boots",
+		neck="Loricate Torque +1",
+		waist="Plat. Mog. Belt",
+		left_ear="Eabani Earring",
+		right_ear="Etiolation Earring",
+		left_ring="Defending Ring",
+		right_ring="Chirich Ring +1",
+		back="Solemnity Cape",
+}
+
     sets.engaged.DTLite = {}
     sets.engaged.Acc = {}
     sets.engaged.SomeAcc = {}
@@ -110,9 +126,10 @@ function init_gear_sets()
     sets.precast.WS = {
 		ammo="Crepuscular Pebble",
 		head="Maculele Tiara +3",
-		body="Gleti's Cuirass", --Needs RP
-		hands={ name="Nyame Gauntlets", augments={'Path: B',}}, --Maxixi Bangles +3
-		legs={ name="Nyame Flanchard", augments={'Path: B',}},
+		--body="Gleti's Cuirass", --Needs RP
+		body="Nyame Mail",
+		hands="Maxixi Bangles +4",
+		legs="Maculele Tights +3",
 		feet={ name="Nyame Sollerets", augments={'Path: B',}},
 		neck="Etoile Gorget +2",
 		waist="Kentarch Belt +1",
@@ -131,8 +148,8 @@ function init_gear_sets()
 		ammo="Crepuscular Pebble",
 		head="Maculele Tiara +3",
 		body="Gleti's Cuirass",
-		hands={ name="Nyame Gauntlets", augments={'Path: B',}},
-		legs={ name="Nyame Flanchard", augments={'Path: B',}},
+		hands="Maxixi Bangles +4",
+		legs="Maculele Tights +3",
 		feet={ name="Nyame Sollerets", augments={'Path: B',}},
 		neck={ name="Etoile Gorget +2", augments={'Path: A',}},
 		waist={ name="Kentarch Belt +1", augments={'Path: A',}},
@@ -151,7 +168,7 @@ function init_gear_sets()
 		head="Maculele Tiara +3",
 		body="Gleti's Cuirass", --Needs RP
 		hands="Gleti's gauntlets",
-		legs="Gleti's breeches",
+		legs="Maculele Tights +3",
 		feet={ name="Nyame Sollerets", augments={'Path: B',}},
 		neck="Etoile Gorget +2",
 		waist="Sailfi belt +1",
@@ -252,12 +269,12 @@ function init_gear_sets()
 		back="Senuna's Mantle",}
 
     sets.precast.Jig = {
-		legs="Horos Tights +1",
+		legs="Horos Tights +3",
 		feet="Maxixi Toe Shoes +3",}
 
     sets.precast.Step = {
 		head="Maxixi Tiara +3",
-		hands="Maxixi Bangles +3",
+		hands="Maxixi Bangles +4",
 		feet="Maxixi Toe Shoes +3",}
 		
     sets.Enmity = {}
@@ -296,7 +313,7 @@ function init_gear_sets()
 	------------------------------
     -- Buff sets: Gear that needs to be worn to actively enhance a current player buff.
 	
-    sets.buff['Saber Dance'] = {} --legs="Horos Tights"
+    sets.buff['Saber Dance'] = {} --legs="Horos Tights +3"
     sets.buff['Climactic Flourish'] = {} --head="Charis Tiara +2"
 	sets.buff.Doom = set_combine(sets.buff.Doom, {})
 	sets.buff.Sleep = {head="Frenzy Sallet"}
