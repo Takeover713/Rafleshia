@@ -2,7 +2,7 @@
 function user_setup()
     state.OffenseMode:options('Normal','SomeAcc','Acc','Aminon')
     state.HybridMode:options('Normal','DTLite','PDT')
-    state.WeaponskillMode:options('Match','Normal','SomeAcc','Acc')
+    state.WeaponskillMode:options('Match','Normal','SomeAcc','Acc','Aminon')
 	state.IdleMode:options('Normal')
     state.PhysicalDefenseMode:options('PDT')
 	state.MagicalDefenseMode:options('MDT')
@@ -130,6 +130,27 @@ function init_gear_sets()
 		body="Nyame Mail",
 		hands="Maxixi Bangles +4",
 		legs="Maculele Tights +3",
+		--legs="Horos Tights +4",
+		feet={ name="Nyame Sollerets", augments={'Path: B',}},
+		neck="Etoile Gorget +2",
+		waist="Kentarch Belt +1",
+		left_ear={ name="Moonshade Earring", augments={'Accuracy+4','TP Bonus +250',}},
+		right_ear="Macu. Earring +1",
+		left_ring="Ephramad's Ring",
+		right_ring="Regal Ring",
+		back={ name="Senuna's Mantle", augments={'DEX+20','Accuracy+20 Attack+20','DEX+10','Weapon skill damage +10%','Phys. dmg. taken-2%',}},}
+
+    sets.precast.WS.SomeAcc = set_combine(sets.precast.WS, {})
+    sets.precast.WS.Acc = set_combine(sets.precast.WS, {})
+	
+	sets.precast.WS.Aminon = {
+		ammo="Crepuscular Pebble",
+		head="Maculele Tiara +3",
+		--body="Gleti's Cuirass", --Needs RP
+		body="Nyame Mail",
+		hands="Maxixi Bangles +4",
+		--legs="Maculele Tights +3",
+		legs="Horos Tights +4",
 		feet={ name="Nyame Sollerets", augments={'Path: B',}},
 		neck="Etoile Gorget +2",
 		waist="Kentarch Belt +1",
@@ -140,21 +161,36 @@ function init_gear_sets()
 		back={ name="Senuna's Mantle", augments={'DEX+20','Accuracy+20 Attack+20','DEX+10','Weapon skill damage +10%','Phys. dmg. taken-2%',}},
 }
 
-    sets.precast.WS.SomeAcc = set_combine(sets.precast.WS, {})
-    sets.precast.WS.Acc = set_combine(sets.precast.WS, {})
-
     -- Specific weaponskill sets.  Uses the base set if an appropriate WSMod version isn't found.
-    sets.precast.WS["Rudra's Storm"] = set_combine(sets.precast.WS, {
+    -- sets.precast.WS["Rudra's Storm"] = set_combine(sets.precast.WS, {
+		-- ammo="Crepuscular Pebble",
+		-- head="Maculele Tiara +3",
+		-- body="Gleti's Cuirass",
+		-- hands="Maxixi Bangles +4",
+		-- legs="Maculele Tights +3",
+		-- feet={ name="Nyame Sollerets", augments={'Path: B',}},
+		-- neck={ name="Etoile Gorget +2", augments={'Path: A',}},
+		-- waist={ name="Kentarch Belt +1", augments={'Path: A',}},
+		-- left_ear={ name="Moonshade Earring", augments={'Accuracy+4','TP Bonus +250',}},
+		-- right_ear={ name="Macu. Earring +1", augments={'System: 1 ID: 1676 Val: 0','Accuracy+11','Mag. Acc.+11','"Store TP"+3',}},
+		-- left_ring="Ephramad's Ring",
+		-- right_ring="Regal Ring",
+		-- back={ name="Senuna's Mantle", augments={'DEX+20','Accuracy+20 Attack+20','DEX+10','Weapon skill damage +10%','Phys. dmg. taken-2%',}},
+-- })
+
+sets.precast.WS["Rudra's Storm"] = set_combine(sets.precast.WS, {
 		ammo="Crepuscular Pebble",
 		head="Maculele Tiara +3",
-		body="Gleti's Cuirass",
+		--body="Gleti's Cuirass", --Needs RP
+		body="Nyame Mail",
 		hands="Maxixi Bangles +4",
-		legs="Maculele Tights +3",
+		--legs="Maculele Tights +3",
+		legs="Horos Tights +4",
 		feet={ name="Nyame Sollerets", augments={'Path: B',}},
-		neck={ name="Etoile Gorget +2", augments={'Path: A',}},
-		waist={ name="Kentarch Belt +1", augments={'Path: A',}},
+		neck="Etoile Gorget +2",
+		waist="Kentarch Belt +1",
 		left_ear={ name="Moonshade Earring", augments={'Accuracy+4','TP Bonus +250',}},
-		right_ear={ name="Macu. Earring +1", augments={'System: 1 ID: 1676 Val: 0','Accuracy+11','Mag. Acc.+11','"Store TP"+3',}},
+		right_ear="Macu. Earring +1",
 		left_ring="Ephramad's Ring",
 		right_ring="Regal Ring",
 		back={ name="Senuna's Mantle", augments={'DEX+20','Accuracy+20 Attack+20','DEX+10','Weapon skill damage +10%','Phys. dmg. taken-2%',}},
@@ -269,7 +305,7 @@ function init_gear_sets()
 		back="Senuna's Mantle",}
 
     sets.precast.Jig = {
-		legs="Horos Tights +3",
+		legs="Horos Tights +4",
 		feet="Maxixi Toe Shoes +3",}
 
     sets.precast.Step = {
@@ -313,7 +349,7 @@ function init_gear_sets()
 	------------------------------
     -- Buff sets: Gear that needs to be worn to actively enhance a current player buff.
 	
-    sets.buff['Saber Dance'] = {} --legs="Horos Tights +3"
+    sets.buff['Saber Dance'] = {} --legs="Horos Tights +4"
     sets.buff['Climactic Flourish'] = {} --head="Charis Tiara +2"
 	sets.buff.Doom = set_combine(sets.buff.Doom, {})
 	sets.buff.Sleep = {head="Frenzy Sallet"}
