@@ -7,7 +7,7 @@ function user_setup()
     state.PhysicalDefenseMode:options('PDT')
 	state.MagicalDefenseMode:options('MDT')
 	state.ResistDefenseMode:options('MEVA')
-	state.Weapons:options('Gletis','Prime','Twashtar')
+	state.Weapons:options('Prime','Twashtar')
 
     -- Additional local binds
     send_command('bind @` gs c step')
@@ -82,17 +82,17 @@ function init_gear_sets()
 	
 	--45%/Max Magic Haste (0% Dual Wield needed)
     sets.engaged = {
-		ammo="Aurgelmir Orb +1",
-		head="Malignance Chapeau",
+		ammo="Coiste Bodhar",
+		head="Maculele Tiara +3",
 		body="Malignance Tabard",
-		hands="Malignance Gloves",
+		hands={ name="Adhemar Wrist. +1", augments={'DEX+12','AGI+12','Accuracy+20',}},
 		legs="Gleti's Breeches",
-		feet="Malignance Boots",
-		neck="Etoile Gorget +2",
-		waist="Reiki Yotai",
+		feet="Macu. Toe Sh. +3",
+		neck="Null Loop",
+		waist="Kentarch Belt +1",
 		left_ear="Sherida Earring",
 		right_ear="Telos Earring",
-		left_ring="Epona's Ring",
+		left_ring="Moonlight Ring",
 		right_ring="Moonlight Ring",
 		back={ name="Senuna's Mantle", augments={'DEX+20','Accuracy+20 Attack+20','DEX+10','"Store TP"+10','Phys. dmg. taken-10%',}},
 }
@@ -311,7 +311,7 @@ sets.precast.WS["Rudra's Storm"] = set_combine(sets.precast.WS, {
     sets.precast.Step = {
 		head="Maxixi Tiara +3",
 		hands="Maxixi Bangles +4",
-		feet="Maxixi Toe Shoes +3",}
+		feet="Horos T. Shoes +3"}
 		
     sets.Enmity = {}
 		
