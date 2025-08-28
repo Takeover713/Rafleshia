@@ -6,7 +6,7 @@ function user_setup()
 	state.PhysicalDefenseMode:options('PDT')
 	state.MagicalDefenseMode:options('MDT')
 	state.ResistDefenseMode:options('MEVA')
-	state.Weapons:options('None','DualWeapons','MeleeWeapons')
+	state.Weapons:options('None','DualWeapons','MeleeWeapons','Zeni','Zeni2000')
 
 	gear.obi_cure_waist = "Austerity Belt +1"
 	gear.obi_cure_back = "Alaunus's Cape"
@@ -46,7 +46,8 @@ function init_gear_sets()
 	sets.weapons.MeleeWeapons = {main="Izcalli",sub="Ammurapi Shield"}
 	sets.weapons.DualWeapons = {main="Izcalli",sub="Nehushtan"}
 	sets.WakeUpWeapons = {main="Prime Maul"}
-	
+	sets.weapons.Zeni = {range="Soultrapper",ammo="Blank Soulplate"}
+	sets.weapons.Zeni2000 = {range="Soultrapper 2000",ammo="Blank Soulplate"}
     sets.buff.Sublimation = {waist="Embla Sash"}
     sets.buff.DTSublimation = {waist="Embla Sash"}
 	
@@ -261,7 +262,7 @@ function init_gear_sets()
 	neck="Malison Medallion",
 	waist="Bishop's Sash",
 	left_ear="Meili Earring",
-	right_ear="Ebers Earring +1",
+	right_ear="Ebers Earring +2",
 	left_ring="Prolix Ring",
 	right_ring="Kishar Ring",
 	left_ring="Menelaus's Ring",
