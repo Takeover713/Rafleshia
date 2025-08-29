@@ -327,7 +327,38 @@ sets.precast.WS["Rudra's Storm"] = set_combine(sets.precast.WS, {
     sets.precast.Flourish3 = {}
     sets.precast.Flourish3['Striking Flourish'] = {}
     sets.precast.Flourish3['Climactic Flourish'] = {}
-
+	
+	sets.precast.JA['Jump'] = {
+	    ammo="Coiste Bodhar", -- Aurgelmir orb
+		head="Maculele Tiara +3",
+		body="Malignance Tabard",
+		hands="Adhemar Wristb. +1",
+		legs="Malignance Tights", -- +3
+		feet="Macu. Toe Sh. +3",
+		neck="Etoile Gorget +2",
+		waist={ name="Sailfi Belt +1", augments={'Path: A',}},
+		left_ear="Telos Earring", --telos earring
+		right_ear="Sherida Earring",
+		left_ring="Chirich Ring +1",
+		right_ring="Petrov Ring",
+		back={ name="Senuna's Mantle", augments={'DEX+20','Accuracy+20 Attack+20','DEX+10','"Store TP"+10','Phys. dmg. taken-10%',}},
+}  
+	
+	sets.precast.JA['High Jump'] = {
+		ammo="Coiste Bodhar", -- Aurgelmir orb
+		head="Maculele Tiara +3",
+		body="Malignance Tabard",
+		hands="Adhemar Wristb. +1",
+		legs="Malignance Tights", -- +3
+		feet="Macu. Toe Sh. +3",
+		neck="Etoile Gorget +2",
+		waist={ name="Sailfi Belt +1", augments={'Path: A',}},
+		left_ear="Telos Earring", --telos earring
+		right_ear="Sherida Earring",
+		left_ring="Chirich Ring +1",
+		right_ring="Petrov Ring",
+		back={ name="Senuna's Mantle", augments={'DEX+20','Accuracy+20 Attack+20','DEX+10','"Store TP"+10','Phys. dmg. taken-10%',}},
+}
 	------------------------------
 	 ------ Fast Cast sets ------
 	------------------------------
