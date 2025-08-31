@@ -7,7 +7,7 @@ function user_setup()
     state.CastingMode:options('Normal', 'Resistant')
     state.IdleMode:options('Normal', 'PDT', 'Refresh')
 	state.ExtraMeleeMode = M{['description']='Extra Melee Mode', 'None', 'DWMax'}
-	state.Weapons:options('LeadenMelee','Naegling','NaeglingDW','LastStand','Absorb','AeolianWeapons')
+	state.Weapons:options('LeadenMelee','Naegling','NaeglingDW','LastStand','Absorb','AeolianWeapons','Trials')
 	state.CompensatorMode:options('Always','300','1000','Never')
 	
 	--	AF Body Relic Body,Hands,Feet --Empy Head,Hands,Legs(acc),Feet
@@ -16,8 +16,8 @@ function user_setup()
 	--  Atakos https://www.bg-wiki.com/ffxi/Category:Trial_of_the_Magians_Marksmanship
 	
 	
-    gear.RAbullet = "Chrono Bullet" -- Chrono Bullet
-    gear.WSbullet = "Chrono Bullet"
+    gear.RAbullet = "Bronze Bullet" -- Chrono Bullet
+    gear.WSbullet = "Bronze Bullet"
     gear.MAbullet = "Living Bullet" --For MAB WS, do not put single-use bullets here. Orichalc. Bullet
     gear.QDbullet = "Living Bullet"
     options.ammo_warning_limit = 15
@@ -27,7 +27,7 @@ function user_setup()
 	autows_list = {['LeadenMelee']='Leaden Salute',['Naegling']='Savage Blade',['NaeglingDW']='Savage Blade',['LastStand']='Last Stand',['AeolianWeapons']='Aeolian Edge'}
 	autowstp = 1250
 
-    -- Additional local binds
+    -- Additional local binds☻♥
 	send_command('bind !f11 gs c cycle ExtraMeleeMode')
 	send_command('bind ^` gs c cycle ElementalMode')
 	send_command('bind !` gs c elemental quickdraw')
@@ -45,9 +45,11 @@ function init_gear_sets()
 	sets.weapons.LeadenMelee = {main="Naegling",sub='Nusku Shield',range="Fomalhaut"}
 	sets.weapons.Naegling = {main="Naegling",sub="Nusku Shield",range="Ataktos"}
 	sets.weapons.NaeglingDW = {main="Naegling",sub="Gleti's Knife",range="Ataktos"}
+	sets.weapons.LastStand = {main={ name="Rostam", augments={'Path: A',}},sub="Nusku Shield",range="Fomalhaut"}
 	sets.weapons.Absorb = {main="Naegling",sub="Nusku Shield",range=empty}
 	sets.weapons.AeolianWeapons = {main="Blurred Knife +1",sub="Hep. Rapier +1",range="Ataktos"}
-	sets.weapons.LastStand = {main={ name="Rostam", augments={'Path: A',}},sub="Nusku Shield",range="Fomalhaut"}
+	sets.weapons.Trials = {main="Firetongue",sub="Nusku Shield",range="Anarchy"}
+
 
     -- Sets to return to when not performing an action.
 	
@@ -69,7 +71,7 @@ function init_gear_sets()
 		feet="Malignance Boots",
 		neck="Loricate Torque +1",
 		waist="Null Belt",
-		--left_ear="Tuisto Earring", --norg
+		left_ear="Tuisto Earring",
 		right_ear="Odnowa Earring +1",
 		left_ring="Defending Ring",
 		right_ring="Dark Ring",
@@ -102,17 +104,37 @@ function init_gear_sets()
 		legs="Chasseur's Culottes +1", 
 		feet="Malignance Boots",
 		--neck="Combatant's Torque",
-		neck="",
+		--Carnal Torque RAF
+		--Decimus Torque ALL
+		--Bilious Torque 
+		--Agelast Torque
+		--Maskirova Torque
+		--Yarak Torque TEM BRI
+		--Acantha Torque TEM
+		neck="Iskur Gorget",
 		waist="Reiki Yotai",
 		left_ear="Telos Earring",
 		right_ear="Suppanomimi",
-		--left_ring="Chirich Ring +1", Only have one
+		left_ring="Epona's Ring",
 		right_ring="Chirich Ring +1",
 		back={ name="Camulus's Mantle", augments={'DEX+20','Accuracy+20 Attack+20','Accuracy+10','"Dual Wield"+10','Phys. dmg. taken-10%',}},
 }
     
     sets.engaged.Acc = {}
-    sets.engaged.DW = {}
+    sets.engaged.DW = {		
+		head="Malignance Chapeau",
+		body="Malignance Tabard",
+		hands="Malignance Gloves",
+		legs="Chasseur's Culottes +1", 
+		feet="Malignance Boots",
+		neck="Iskur Gorget",
+		waist="Reiki Yotai",
+		left_ear="Telos Earring",
+		right_ear="Suppanomimi",
+		left_ring="Epona's Ring",
+		right_ring="Chirich Ring +1",
+		back={ name="Camulus's Mantle", augments={'DEX+20','Accuracy+20 Attack+20','Accuracy+10','"Dual Wield"+10','Phys. dmg. taken-10%',}},
+}
     sets.engaged.DW.Acc = {}
 	sets.engaged.DT = {}
 	sets.engaged.DW.DT = {}
@@ -130,7 +152,7 @@ function init_gear_sets()
 		waist="Yemaya Belt",
 		left_ear="Telos Earring",
 		right_ear="Enervating Earring",
-		left_ring="Dingir Ring", --Gin
+		left_ring="Dingir Ring",
 		right_ring="Ilabrat Ring",
 		back={ name="Camulus's Mantle", augments={'AGI+20','Rng.Acc.+20 Rng.Atk.+20','AGI+10','"Store TP"+10',}},
 }
@@ -172,7 +194,7 @@ function init_gear_sets()
 	sets.precast.CorsairRoll = {
 		--main={ name="Rostam", augments={'Path: C',}},
 		--range="Compensator",
-		-- NEED Relic first, Dyna Xarc  --head="Lanun Tricorne +1", --Dynamis, Windy
+		head="Lanun Tricorne +1",
 		neck="Regal Necklace",
 		hands="Chasseur's Gants +1", --Empy, Sortie
 		back={ name="Camulus's Mantle", augments={'INT+20','"Snapshot"+10',}},
@@ -198,7 +220,7 @@ function init_gear_sets()
 		waist="Eschan Stone",
 		--left_ear="Friomisi Earring",
 		right_ear="Hecate's Earring", --Storage
-		--left_ring="Dingir Ring",
+		left_ring="Dingir Ring",
 		--right_ring="Fenrir Ring +1",
 		back={ name="Camulus's Mantle", augments={'AGI+20','Mag. Acc+20 /Mag. Dmg.+20','AGI+10','Weapon skill damage +10%',}},
 }
@@ -302,7 +324,7 @@ function init_gear_sets()
 		waist="Eschan Stone",
 		left_ear="Moonshade Earring",
 		--right_ear="Friomisi Earring",
-		--left_ring="Dingir Ring",
+		left_ring="Dingir Ring",
 		right_ring="Archon Ring",
 		back={ name="Camulus's Mantle", augments={'AGI+20','Mag. Acc+20 /Mag. Dmg.+20','AGI+10','Weapon skill damage +10%',}},
 } 
@@ -331,7 +353,21 @@ function init_gear_sets()
 		waist="Flume Belt",
 		legs="Rawhide Trousers",
 		feet="Carmine Greaves +1"}
-		
+	
+		sets.midcast['Enfeebling Magic'] = {
+		head="Null Masque",
+		body="Malignance Tabard",
+		hands="Malignance Gloves",
+		legs="Malignance Tights",
+		feet="Malignance Boots",
+		neck="Null Loop",
+		waist="Null Belt",
+		left_ear="Andoaa Earring",
+		right_ear="Crepuscular Earring",
+		left_ring="Stikini Ring +1",
+		right_ring="Stikini Ring +1",
+		back="Null Shawl",
+}
         
     -- Specific spells
 
