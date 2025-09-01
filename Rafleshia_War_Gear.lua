@@ -135,7 +135,7 @@ function init_gear_sets()
 		neck={ name="War. Beads +2", augments={'Path: A',}},
 		waist={ name="Sailfi Belt +1", augments={'Path: A',}},
 		left_ear={ name="Schere Earring", augments={'Path: A',}},
-		right_ear={ name="Boii Earring +1", augments={'System: 1 ID: 1676 Val: 0','Accuracy+11','Mag. Acc.+11','Crit.hit rate+3',}},
+		right_ear="Boii Earring +1",
 		left_ring="Niqmaddu Ring",
 		right_ring="Chirich Ring +1",
 		back={ name="Cichol's Mantle", augments={'DEX+20','Accuracy+20 Attack+20','Accuracy+10','"Dbl.Atk."+10','Damage taken-5%',}},
