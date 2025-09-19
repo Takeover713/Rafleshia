@@ -77,7 +77,7 @@ function init_gear_sets()
     -- body="Mpaca's Doublet",
     -- hands="Mpaca's Gloves",
     -- legs="Bhikku Hose +3",
-    -- feet="Anch. Gaiters +3",
+    -- feet="Anch. Gaiters +4",
     -- neck={ name="Mnk. Nodowa +2", augments={'Path: A',}},
     -- waist="Moonbow Belt +1",
     -- left_ear="Sherida Earring",
@@ -94,7 +94,7 @@ function init_gear_sets()
     body="Mpaca's Doublet",
     hands="Malignance Gloves",
     legs="Bhikku Hose +3",
-    feet="Anch. Gaiters +3",
+    feet="Anch. Gaiters +4",
     neck={ name="Mnk. Nodowa +2", augments={'Path: A',}},
     waist="Moonbow Belt +1",
     left_ear="Sherida Earring",
@@ -226,7 +226,7 @@ function init_gear_sets()
     body="Bhikku Cyclas +3",
     hands={ name="Adhemar Wristbands", augments={'DEX+10','AGI+10','Accuracy+15',}},
     legs="Mpaca's Hose",
-    feet="Anch. Gaiters +3",
+    feet="Anch. Gaiters +4",
     neck={ name="Mnk. Nodowa +2", augments={'Path: A',}},
     waist="Moonbow Belt +1",
     left_ear="Sherida Earring",
@@ -242,7 +242,7 @@ function init_gear_sets()
     body="Bhikku Cyclas +3",
     hands={ name="Adhemar Wristbands", augments={'DEX+10','AGI+10','Accuracy+15',}},
     legs="Mpaca's Hose",
-    feet="Anch. Gaiters +3",
+    feet="Anch. Gaiters +4",
     neck={ name="Mnk. Nodowa +2", augments={'Path: A',}},
     waist="Moonbow Belt +1",
     left_ear="Sherida Earring",
@@ -283,7 +283,7 @@ function init_gear_sets()
 
 	sets.precast.JA['Hundred Fists'] = {legs="Hesychast's Hose +3"}
 	sets.precast.JA['Boost'] = {hands="Anchorite's Gloves +1"}
-	sets.precast.JA['Dodge'] = {feet="Anch. Gaiters +3"}
+	sets.precast.JA['Dodge'] = {feet="Anch. Gaiters +4"}
 	sets.precast.JA['Focus'] = {head="Anchorite's Crown +1"}
 	sets.precast.JA['Counterstance'] = {feet="Hesychast's Gaiters +1"} 
 	sets.precast.JA['Footwork'] = {feet="Shukuyu Sune-Ate"} --Suzaku
@@ -296,7 +296,7 @@ function init_gear_sets()
 		hands="Hes. Gloves +2",
         back="Tuilha Cape",
 		legs="Hes. Hose +3",
-		feet="Anch. Gaiters +3"
+		feet="Anch. Gaiters +4"
 }
 
 	sets.precast.JA['Chakra'] = { --Mix DT + VIT
@@ -321,7 +321,7 @@ function init_gear_sets()
 	sets.buff.Doom = set_combine(sets.buff.Doom, {})
 	sets.buff.Sleep = {}
 	sets.buff.Impetus = {body="Bhikku Cyclas +3"}
-	sets.buff.Footwork = {feet="Anch. Gaiters +3"}
+	sets.buff.Footwork = {feet="Anch. Gaiters +4"}
 	sets.FootworkWS = {}
 	sets.TreasureHunter = {}
 	sets.Skillchain = {}
