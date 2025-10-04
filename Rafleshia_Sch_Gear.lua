@@ -11,7 +11,7 @@ function user_setup()
     -------------------------
 
 --	Scholar's > Academic (Artifact)
---Academic +2 & +3 (Omen) 			Kei Scale (2/4)
+--Academic +3 (Omen)
 
 --Head		P. SCH Card x40	Kei's Scale	Khoma Cloth, S. Faulpie Leather,Cyan Orb x2
 --Body		P. SCH Card x50	Kei's Scale	Niobium Ingot, Cypress Lumber,Cyan Orb x3
@@ -20,15 +20,9 @@ function user_setup()
 
 				--DO NOT GET: Legs(Only stun)
 
---	Argute's > Pedagogy (Relic Attire)=Dynamis Bastok: O Windy: X Sandy: X Jeuno: X
+--	Argute's > Pedagogy (Relic Attire) Needs Windy: X for body/head
 --Pedagogy +2 & +3 (Dynamis)//
---Head,		Headshard: SCH x2	Cyan Coral	Gabbrath Horn x3	>>>		Headshard: SCH x3	Voidhead: SCH x3	Defiant Scarf x3	Pedagogy Mortarboard +3
 --Body		Torsoshard: SCH x2	Cyan Coral	Yggdreant Bole x3	>>>		Torsoshard: SCH x3	Voidtorso: SCH x3	Hades' Claw x3		Pedagogy Gown +3
-
-				--DO NOT GET: Feet(Only stun)
-
---	Savant's > Arbatel (Empy)=Sortie
---Head, Body, Hands, Leg, Feet
 
     -------------------------
     -------------------------
@@ -203,7 +197,7 @@ function init_gear_sets()
 
     -- Precast sets to enhance JAs
 	
-    sets.precast.JA['Tabula Rasa'] = {legs="Peda. Pants +1"} --Argute Dynamis
+    sets.precast.JA['Tabula Rasa'] = {legs="Peda. Pants +4"}
 	sets.precast.JA['Enlightenment'] = {body="Peda. Gown +1"} --Dynamis
 
     -- Fast cast sets for spells
@@ -212,7 +206,7 @@ function init_gear_sets()
 --The effect is 3% at 2 pieces, 6% at 3 pieces, 9% at 4 pieces and 12% at 5 pieces. 
 
     sets.precast.FC = {
-	--main="Malevolence",  --Musa 80M on AH
+	--main="Malevolence",  --Musa AH
 	main="Sucellus",																		--5
     sub="Genmei Shield",																	--
     ammo="Incantor Stone",																	--2
@@ -320,7 +314,7 @@ function init_gear_sets()
 	sets.midcast.Cursna = {
     main={ name="Gada", augments={'Enh. Mag. eff. dur. +5','MND+4','Mag. Acc.+15','DMG:+1',}},
     head={ name="Vanya Hood", augments={'MP+50','"Fast Cast"+10','Haste+2%',}},
-	body={ name="Peda. Gown +1", augments={'Enhances "Enlightenment" effect',}}, --Dynamis clear req +3
+	body={ name="Peda. Gown +1", augments={'Enhances "Enlightenment" effect',}},
 	hands="Hieros Mittens",
 	legs="Acad. Pants +2", --Omen
     feet="Regal Pumps +1",
@@ -340,8 +334,8 @@ function init_gear_sets()
 		sub="Ammurapi Shield",
 		ammo="Pemphredo Tathlum",
 		head={ name="Telchine Cap", augments={'Enh. Mag. eff. dur. +10',}},
-		body={ name="Peda. Gown +1", augments={'Enhances "Enlightenment" effect',}}, --Dynamis clear req +3
-		hands="Arbatel Bracers +2",
+		body={ name="Peda. Gown +1", augments={'Enhances "Enlightenment" effect',}},
+		hands="Arbatel Bracers +3",
 		legs={ name="Telchine Braconi", augments={'Enh. Mag. eff. dur. +10',}},
 		feet={ name="Telchine Pigaches", augments={'Enh. Mag. eff. dur. +10',}},
 		neck="Incanter's Torque",
@@ -359,7 +353,7 @@ function init_gear_sets()
 		ammo="Pemphredo Tathlum",
 		head="Arbatel Bonnet +3",
 		body={ name="Telchine Chas.", augments={'Enh. Mag. eff. dur. +10',}},
-		hands="Arbatel Bracers +2",
+		hands="Arbatel Bracers +3",
 		legs={ name="Telchine Braconi", augments={'Enh. Mag. eff. dur. +10',}},
 		feet={ name="Telchine Pigaches", augments={'Enh. Mag. eff. dur. +10',}},
 		neck="Incanter's Torque",
@@ -413,10 +407,10 @@ function init_gear_sets()
     sets.midcast.ElementalEnfeeble.Resistant = set_combine(sets.midcast['Enfeebling Magic'].Resistant, {head="Amalric Coif +1",ear2="Barkaro. Earring",back=gear.nuke_jse_back,waist="Acuity Belt +1"})
 	
 	sets.midcast.IntEnfeebles = set_combine(sets.midcast['Enfeebling Magic'], {
-		head="Acad. Mortar. +2", -- Scholars(Omen)
+		head="Acad. Mortar. +2", -- Omen)
 		body="Acad. Gown +2",
 		hands="Kaykaus Cuffs +1",
-		legs="Arbatel Pants +2",
+		legs="Arbatel Pants +3",
 		feet="Acad. Loafers +2", --Omen
 })
 
@@ -426,7 +420,7 @@ function init_gear_sets()
 		head="",
 		body={ name="Cohort Cloak +1", augments={'Path: A',}},
 		hands="Kaykaus Cuffs +1",
-		legs="Arbatel Pants +2",
+		legs="Arbatel Pants +3",
 		feet="Acad. Loafers +2", --Omen
 })
 	sets.midcast.MndEnfeebles.Resistant = set_combine(sets.midcast['Enfeebling Magic'].Resistant, {})
@@ -506,7 +500,7 @@ function init_gear_sets()
 		body="Acad. Gown +2", --Omen
 		hands="Acad. Bracers +2", --Omen
 		legs="Acad. Pants +2",  --Omen
-		feet="Peda. Loafers +1", --Dynamis Windy?
+		--feet="Peda. Loafers +1", Says don't bother, stun only piece.
 		neck={ name="Argute Stole +2", augments={'Path: A',}},
 		waist="Fucho-no-Obi",
 		left_ear="Regal Earring",
@@ -583,11 +577,11 @@ function init_gear_sets()
 		sub="Ammurapi Shield",
 		ammo="Ghastly Tathlum +1",
 		head="Agwu's Cap",
-		body="Arbatel Gown +3",
+		body="Agwu's Robe",
 		hands="Agwu's Gages",
 		legs="Agwu's Slops",
 		feet="Arbatel Loafers +3",
-		neck={ name="Argute Stole +2", augments={'Path: A',}},
+		neck="Sibyl Scarf",
 		waist="Acuity Belt +1",
 		--waist="Hachirin-no-Obi",
 		left_ear="Regal Earring",
@@ -602,14 +596,15 @@ function init_gear_sets()
 		sub="Ammurapi Shield",
 		--sub="Culminus", --One to be feared HTMB
 		ammo="Ghastly Tathlum +1",
-		head="Agwu's Cap",	--Peda. M.Board +3 (Argute - Dyna Windy?)
+		head="Agwu's Cap",
+		head="Peda. M.Board +4",
 		body="Agwu's Robe",
 		hands="Agwu's Gages",
 		legs="Agwu's Slops",
 		feet="Arbatel Loafers +3",
 		neck={ name="Argute Stole +2", augments={'Path: A',}},
 		waist="Acuity Belt +1",
-		left_ear="Regal Earring", --Arbatel Earring +2 (Sortie)
+		left_ear="Regal Earring",
 		right_ear="Malignance Earring",
 		left_ring="Mujin Band",
 		right_ring="Mallquis Ring",
@@ -683,10 +678,10 @@ function init_gear_sets()
     -- Buff sets: Gear that needs to be worn to actively enhance a current player buff.
     sets.buff['Ebullience'] = {head="Arbatel Bonnet +3"}
     sets.buff['Rapture'] = {head="Arbatel Bonnet +3"}
-    sets.buff['Perpetuance'] = {hands="Arbatel Bracers +2"}
-    sets.buff['Immanence'] = {hands="Arbatel Bracers +2"}
-    sets.buff['Penury'] = {legs="Arbatel Pants +2"}
-    sets.buff['Parsimony'] = {legs="Arbatel Pants +2"}
+    sets.buff['Perpetuance'] = {hands="Arbatel Bracers +3"}
+    sets.buff['Immanence'] = {hands="Arbatel Bracers +3"}
+    sets.buff['Penury'] = {legs="Arbatel Pants +3"}
+    sets.buff['Parsimony'] = {legs="Arbatel Pants +3"}
     sets.buff['Celerity'] = {feet="Peda. Loafers +1"}
     sets.buff['Alacrity'] = {feet="Peda. Loafers +1"}
     sets.buff['Klimaform'] = {feet="Arbatel Loafers +3"}
