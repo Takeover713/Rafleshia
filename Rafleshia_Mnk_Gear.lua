@@ -28,6 +28,11 @@ end
 	
 function init_gear_sets()
 
+--AF Feet Tornado Kick w/ footwork --Anchorite's gaiters +4
+--Hesychast's crown +4
+--Relic head --Hesychast's crown +4 (Asuran Fists)
+-- Chap 1 x10 + 100 Byne x2 + Griffon Hide	+ Phoenix Feather
+
 	-- Weapons sets
 	sets.weapons.Verethragna = {main="Verethragna"}
 	sets.weapons.Barehanded = {main=empty}
@@ -43,7 +48,7 @@ function init_gear_sets()
     -- Idle sets --
 	---------------
 
-	sets.idle = {    
+	sets.idle = {
 	main="Varga Purnikawa",
     ammo="Aurgelmir Orb +1",
     body="Nyame Mail",
@@ -56,7 +61,7 @@ function init_gear_sets()
     left_ear="Etiolation Earring",
     right_ear="Telos Earring",
     left_ring="Defending Ring",
-    right_ring="Dark Ring",
+    right_ring="Murky Ring",
     back="Solemnity Cape",
 }
 	sets.idle.Weak = {}

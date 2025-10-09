@@ -5,24 +5,42 @@ function user_setup()
     state.IdleMode:options('Normal', 'PDT', 'TPEat')
 	state.HybridMode:options('Normal','PDT')
 	state.Weapons:options('None','Akademos','Khatvanga')
-
-    -------------------------
+--gs c set autoarts off
+	
+	-------------------------
 		-- +3 UPGRADES --
     -------------------------
+
+--CURE III = 510 - - 561HP w/ Weather
+--CURE IV = 960HP - 1056HP w/ Weather
 
 --	Scholar's > Academic (Artifact)
 --Academic +3 (Omen)
 
---Head		P. SCH Card x40	Kei's Scale	Khoma Cloth, S. Faulpie Leather,Cyan Orb x2
---Body		P. SCH Card x50	Kei's Scale	Niobium Ingot, Cypress Lumber,Cyan Orb x3
---Hands		P. SCH Card x35	Kei's Scale	Faulpie Leather x3, Cypress Log,Cyan Orb
---Feet		P. SCH Card x30	Kei's Scale	Azure Cermet x3, Khoma Thread,Cyan Orb
+--Head: Great for fast cast and best piece for sublimation, fantastic for dark arts enfeebles.
+--P. SCH Card x40		Kei's Scale		Khoma Cloth, 		S. Faulpie Leather,Cyan Orb x2
 
-				--DO NOT GET: Legs(Only stun)
+--Body:Great for dark arts enfeeble, stuns, great piece for drain/aspir, and myrkr mp return too!
+--P. SCH Card x50		Kei's Scale		Niobium Ingot, 		Cypress Lumber,	Cyan Orb x3
 
---	Argute's > Pedagogy (Relic Attire) Needs Windy: X for body/head
---Pedagogy +2 & +3 (Dynamis)//
---Body		Torsoshard: SCH x2	Cyan Coral	Yggdreant Bole x3	>>>		Torsoshard: SCH x3	Voidtorso: SCH x3	Hades' Claw x3		Pedagogy Gown +3
+--Hands: Highest fast cast on hands, and MACC when needed
+--P. SCH Card x35		Kei's Scale		Faulpie Leather x3, Cypress Log,	Cyan Orb
+
+--Legs?? Acad. Pants +3 ?Cursna
+
+	--DO NOT GET: Feet(Only stun)
+	
+-- ***************************
+
+--Argute's > Pedagogy (Relic-Dynamis)
+
+--Body: Best sublimation, great for cursna, has the highest (12%) enhancing duration on body
+
+--	Torsoshard: SCH x2	Cyan Coral			Yggdreant Bole x3	Gown +2
+--	Torsoshard: SCH x3	Voidtorso: SCH x3	Hades' Claw x3		Gown +3
+
+--Hands:Best healing hands in a lot of circumstances, Usually getting cure potency II is difficult and these hands are really nice for it, and some healing skill on top of that. The tranquillity/equanimity is not really a consideration but it's there.
+
 
     -------------------------
     -------------------------
@@ -38,13 +56,7 @@ function user_setup()
 	send_command('bind !pause gs c toggle AutoSubMode') --Automatically uses sublimation and Myrkr.
 	send_command('bind @^` input /ja "Parsimony" <me>')
 	send_command('bind ^backspace input /ma "Stun" <t>')
-	send_command('bind !backspace gs c scholar speed')
-	send_command('bind @backspace gs c scholar aoe')
-	send_command('bind ^= input /ja "Dark Arts" <me>')
-	send_command('bind != input /ja "Light Arts" <me>')
-	send_command('bind ^\\\\ input /ma "Protect V" <t>')
-	send_command('bind @\\\\ input /ma "Shell V" <t>')
-	send_command('bind !\\\\ input /ma "Reraise III" <me>')
+
 	
     select_default_macro_book(2, 8)
 end
@@ -77,21 +89,21 @@ function init_gear_sets()
 }
 
     sets.idle.PDT = {
-		main="Malignance Pole",
-		sub="Achaq Grip",
+		main="Bolelabunga",
+		sub="Genmei Shield",
 		ammo="Homiliary",
-		head="Befouled Crown",
+		head="Null Masque",
 		body="Arbatel Gown +3",
-		hands="Nyame Gauntlets",
+		hands={ name="Nyame Gauntlets", augments={'Path: B',}},
 		legs="Agwu's Slops",
-		feet="Nyame Sollerets",
+		feet={ name="Nyame Sollerets", augments={'Path: B',}},
 		neck="Loricate Torque +1",
-		waist="Embla Sash",
+		waist="Isa Belt",
 		left_ear="Etiolation Earring",
 		right_ear="Genmei Earring",
-		left_ring="Stikini Ring +1",
+		left_ring={ name="Murky Ring", augments={'Path: A',}},
 		right_ring="Stikini Ring +1",
-		back="Solemnity Cape",
+		back={ name="Lugh's Cape", augments={'MND+20','Eva.+20 /Mag. Eva.+20','Enmity-10','Damage taken-5%',}},
 }
 		
 	sets.idle.Weak = {
@@ -206,14 +218,15 @@ function init_gear_sets()
 --The effect is 3% at 2 pieces, 6% at 3 pieces, 9% at 4 pieces and 12% at 5 pieces. 
 
     sets.precast.FC = {
-	--main="Malevolence",  --Musa AH
-	main="Sucellus",																		--5
-    sub="Genmei Shield",																	--
+	main="Malevolence",  --Musa AH	--5%
+	sub="Chanter's Shield",																	--
     ammo="Incantor Stone",																	--2
     head={ name="Merlinic Hood", augments={'"Mag.Atk.Bns."+7','"Fast Cast"+7','MND+10',}},	--15
-    body={ name="Merlinic Jubbah", augments={'"Mag.Atk.Bns."+23','"Fast Cast"+7','CHR+4',}},--7
+    body="Pinga Tunic +1",
+	--body={ name="Merlinic Jubbah", augments={'"Mag.Atk.Bns."+23','"Fast Cast"+7','CHR+4',}},--7
     hands="Acad. Bracers +2",																--7
-    legs={ name="Merlinic Shalwar", augments={'"Mag.Atk.Bns."+6','"Fast Cast"+7',}},		--7
+    legs="Pinga Pants +1",
+	--legs={ name="Merlinic Shalwar", augments={'"Mag.Atk.Bns."+6','"Fast Cast"+7',}},		--7
     feet="Acad. Loafers +2",																--
     neck="Voltsurge Torque",																--4
     waist="Embla Sash",																		--5
@@ -244,11 +257,11 @@ function init_gear_sets()
 	--sets.element.Earth = {neck="Quanpur Necklace"}
 	--sets.element.Dark = {head="Pixie Hairpin +1",ring2="Archon Ring"}
 
-    sets.midcast.FastRecast = {
-		ammo="Hasty Pinion +1",
-		head="Amalric Coif +1",neck="Voltsurge Torque",ear1="Enchntr. Earring +1",ear2="Loquacious Earring",
-		body="Zendik Robe",hands="Gende. Gages +1",ring1="Kishar Ring",ring2="Prolix Ring",
-		back="Swith Cape +1",waist="Witful Belt",legs="Psycloth Lappas",feet="Regal Pumps +1"}
+    --sets.midcast.FastRecast = {
+		--ammo="Hasty Pinion +1",
+		--head="Amalric Coif +1",neck="Voltsurge Torque",ear1="Enchntr. Earring +1",ear2="Loquacious Earring",
+		--body="Zendik Robe",hands="Gende. Gages +1",ring1="Kishar Ring",ring2="Prolix Ring",
+		--back="Swith Cape +1",waist="Witful Belt",legs="Psycloth Lappas",feet="Regal Pumps +1"}
 		
     sets.midcast.Cure = {
 		main="Daybreak",
@@ -257,7 +270,8 @@ function init_gear_sets()
 		head={ name="Vanya Hood", augments={'MP+50','"Fast Cast"+10','Haste+2%',}},
 		body="Arbatel Gown +3",
 		hands={ name="Telchine Gloves", augments={'Enh. Mag. eff. dur. +6',}},
-		legs="Chironic Hose",
+		legs="Pinga Pants",
+		--legs="Chironic Hose",
 		feet={ name="Medium's Sabots", augments={'MP+50','MND+10','"Conserve MP"+7','"Cure" potency +5%',}},
 		neck="Incanter's Torque",
 		waist="Luminary Sash",
@@ -312,19 +326,19 @@ function init_gear_sets()
 	sets.Self_Refresh = {back="Grapevine Cape",waist="Gishdubar Sash",feet="Inspirited Boots"}
 	
 	sets.midcast.Cursna = {
-    main={ name="Gada", augments={'Enh. Mag. eff. dur. +5','MND+4','Mag. Acc.+15','DMG:+1',}},
-    head={ name="Vanya Hood", augments={'MP+50','"Fast Cast"+10','Haste+2%',}},
-	body={ name="Peda. Gown +1", augments={'Enhances "Enlightenment" effect',}},
-	hands="Hieros Mittens",
-	legs="Acad. Pants +2", --Omen
-    feet="Regal Pumps +1",
-    neck="Malison Medallion",
-    waist="Bishop's Sash",
-    left_ear="Etiolation Earring",
-    right_ear="Beatific Earring",
-    left_ring="Ephedra Ring",
-    right_ring="Ephedra Ring",
-    back="Tempered Cape +1",
+		main={ name="Gada", augments={'Enh. Mag. eff. dur. +5','MND+4','Mag. Acc.+15','DMG:+1',}},
+		head={ name="Vanya Hood", augments={'MP+50','"Fast Cast"+10','Haste+2%',}},
+		body={ name="Peda. Gown +1", augments={'Enhances "Enlightenment" effect',}},
+		hands="Hieros Mittens",
+		legs="Acad. Pants +2", --Omen
+		feet="Regal Pumps +1",
+		neck="Malison Medallion",
+		waist="Bishop's Sash",
+		left_ear="Etiolation Earring",
+		right_ear="Beatific Earring",
+		left_ring="Ephedra Ring",
+		right_ring="Ephedra Ring",
+		back="Tempered Cape +1",
 }
 		
 	sets.midcast.StatusRemoval = set_combine(sets.midcast.FastRecast, {main="Oranyan",sub="Clemency Grip"})
@@ -334,7 +348,8 @@ function init_gear_sets()
 		sub="Ammurapi Shield",
 		ammo="Pemphredo Tathlum",
 		head={ name="Telchine Cap", augments={'Enh. Mag. eff. dur. +10',}},
-		body={ name="Peda. Gown +1", augments={'Enhances "Enlightenment" effect',}},
+		body="Telchine Chas.",
+		--body={ name="Peda. Gown +3", augments={'Enhances "Enlightenment" effect',}},
 		hands="Arbatel Bracers +3",
 		legs={ name="Telchine Braconi", augments={'Enh. Mag. eff. dur. +10',}},
 		feet={ name="Telchine Pigaches", augments={'Enh. Mag. eff. dur. +10',}},
@@ -378,36 +393,36 @@ function init_gear_sets()
     -- Enfeebling --
 
 	sets.midcast['Enfeebling Magic'] = {
-    main="Bunzi's Rod",
-    sub="Ammurapi Shield",
-    ammo="Pemphredo Tathlum",
-    neck={ name="Argute Stole +2", augments={'Path: A',}},
-    waist="Luminary Sash",
-    left_ear="Regal Earring",
-    right_ear="Malignance Earring",
-    left_ring="Stikini Ring +1",
-    right_ring="Stikini Ring +1",
-    back={ name="Aurist's Cape +1", augments={'Path: A',}},
+		main="Bunzi's Rod",
+		sub="Ammurapi Shield",
+		ammo="Pemphredo Tathlum",
+		neck={ name="Argute Stole +2", augments={'Path: A',}},
+		waist="Luminary Sash",
+		left_ear="Regal Earring",
+		right_ear="Malignance Earring",
+		left_ring="Stikini Ring +1",
+		right_ring="Stikini Ring +1",
+		back={ name="Aurist's Cape +1", augments={'Path: A',}},
 }
 
 	sets.midcast['Enfeebling Magic'].Resistant = {
-	main="Bunzi's Rod",
-    sub="Ammurapi Shield",
-    ammo="Pemphredo Tathlum",
-    neck={ name="Argute Stole +2", augments={'Path: A',}},
-    waist="Obstinate Sash",
-    left_ear="Regal Earring",
-    right_ear="Malignance Earring",
-    left_ring="Stikini Ring +1",
-    right_ring="Stikini Ring +1",
-    back={ name="Aurist's Cape +1", augments={'Path: A',}},
+		main="Bunzi's Rod",
+		sub="Ammurapi Shield",
+		ammo="Pemphredo Tathlum",
+		neck={ name="Argute Stole +2", augments={'Path: A',}},
+		waist="Obstinate Sash",
+		left_ear="Regal Earring",
+		right_ear="Malignance Earring",
+		left_ring="Stikini Ring +1",
+		right_ring="Stikini Ring +1",
+		back={ name="Aurist's Cape +1", augments={'Path: A',}},
 }
 		
     sets.midcast.ElementalEnfeeble = set_combine(sets.midcast['Enfeebling Magic'], {head="Amalric Coif +1",ear2="Barkaro. Earring",back=gear.nuke_jse_back,waist="Acuity Belt +1"})
     sets.midcast.ElementalEnfeeble.Resistant = set_combine(sets.midcast['Enfeebling Magic'].Resistant, {head="Amalric Coif +1",ear2="Barkaro. Earring",back=gear.nuke_jse_back,waist="Acuity Belt +1"})
 	
 	sets.midcast.IntEnfeebles = set_combine(sets.midcast['Enfeebling Magic'], {
-		head="Acad. Mortar. +2", -- Omen)
+		head="Acad. Mortar. +2", -- Omen
 		body="Acad. Gown +2",
 		hands="Kaykaus Cuffs +1",
 		legs="Arbatel Pants +3",
@@ -576,18 +591,18 @@ function init_gear_sets()
 		main="Bunzi's Rod",
 		sub="Ammurapi Shield",
 		ammo="Ghastly Tathlum +1",
-		head="Agwu's Cap",
+		head="Peda. Mortar. +4",
 		body="Agwu's Robe",
-		hands="Agwu's Gages",
+		hands="Arbatel Bracers +3",
 		legs="Agwu's Slops",
 		feet="Arbatel Loafers +3",
-		neck="Sibyl Scarf",
+		neck={ name="Argute Stole +2", augments={'Path: A',}},
 		waist="Acuity Belt +1",
 		--waist="Hachirin-no-Obi",
 		left_ear="Regal Earring",
 		right_ear="Malignance Earring",
 		left_ring="Freke Ring",
-		right_ring="Metamor. Ring +1",
+		right_ring="Mujin Band",
 		back={ name="Lugh's Cape", augments={'INT+20','Mag. Acc+20 /Mag. Dmg.+20','INT+10','"Mag.Atk.Bns."+10',}},
 }
 
@@ -596,10 +611,9 @@ function init_gear_sets()
 		sub="Ammurapi Shield",
 		--sub="Culminus", --One to be feared HTMB
 		ammo="Ghastly Tathlum +1",
-		head="Agwu's Cap",
-		head="Peda. M.Board +4",
+		head="Arbatel Bonnet +3",
 		body="Agwu's Robe",
-		hands="Agwu's Gages",
+		hands="Arbatel Bracers +3",
 		legs="Agwu's Slops",
 		feet="Arbatel Loafers +3",
 		neck={ name="Argute Stole +2", augments={'Path: A',}},
