@@ -102,7 +102,7 @@ function init_gear_sets()
     feet="Anch. Gaiters +4",
     neck={ name="Mnk. Nodowa +2", augments={'Path: A',}},
     waist="Moonbow Belt +1",
-    left_ear="Sherida Earring",
+    left_ear="Schere Earring",
     right_ear="Telos Earring",
     left_ring="Gere Ring",
     right_ring="Niqmaddu Ring",
@@ -279,8 +279,8 @@ function init_gear_sets()
 	sets.precast.WS['Cataclysm'] = {}
 	
 	-- Swap to these on Moonshade using WS if at 3000 TP
-	sets.MaxTP = {ear1="Brutal Earring",ear2="Sherida Earring",}
-	sets.AccMaxTP = {ear1="Zennaroi Earring",ear2="Telos Earring"}
+	sets.MaxTP = {}
+	sets.AccMaxTP = {}
 
 	-----------------------	
 	   --Precast Sets --

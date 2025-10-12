@@ -219,24 +219,24 @@ function init_gear_sets()
 
     sets.precast.FC = {
 	main="Malevolence",  --Musa AH	--5%
-	sub="Chanter's Shield",																	--
-    ammo="Incantor Stone",																	--2
-    head={ name="Merlinic Hood", augments={'"Mag.Atk.Bns."+7','"Fast Cast"+7','MND+10',}},	--15
+	sub="Chanter's Shield",																	
+    ammo="Incantor Stone",																	
+    head={ name="Merlinic Hood", augments={'"Mag.Atk.Bns."+7','"Fast Cast"+7','MND+10',}},	
     body="Pinga Tunic +1",
-	--body={ name="Merlinic Jubbah", augments={'"Mag.Atk.Bns."+23','"Fast Cast"+7','CHR+4',}},--7
-    hands="Acad. Bracers +2",																--7
+	--body={ name="Merlinic Jubbah", augments={'"Mag.Atk.Bns."+23','"Fast Cast"+7','CHR+4',}},
+    hands="Acad. Bracers +2",																
     legs="Pinga Pants +1",
-	--legs={ name="Merlinic Shalwar", augments={'"Mag.Atk.Bns."+6','"Fast Cast"+7',}},		--7
-    feet="Acad. Loafers +2",																--
-    neck="Voltsurge Torque",																--4
-    waist="Embla Sash",																		--5
-    left_ear="Malignance Earring",															--4
-    right_ear="Loquac. Earring",															--2
-    left_ring="Prolix Ring",																--2
-    right_ring="Kishar Ring",																--4
-    back={ name="Lugh's Cape", augments={'"Fast Cast"+10',}},								--10
+	--legs={ name="Merlinic Shalwar", augments={'"Mag.Atk.Bns."+6','"Fast Cast"+7',}},		
+    feet="Acad. Loafers +2",																
+    neck="Voltsurge Torque",																
+    waist="Embla Sash",																		
+    left_ear="Malignance Earring",															
+    right_ear="Loquac. Earring",															
+    left_ring="Prolix Ring",																
+    right_ring="Kishar Ring",																
+    back={ name="Lugh's Cape", augments={'"Fast Cast"+10',}},								
 }  																						-----------
-																						--	74%
+--																							74%
 	sets.precast.FC.Arts = {}
     sets.precast.FC['Enhancing Magic'] = set_combine(sets.precast.FC, {})
     sets.precast.FC['Elemental Magic'] = set_combine(sets.precast.FC, {})
@@ -564,7 +564,7 @@ function init_gear_sets()
 		sets.midcast.Helix = {
 		main="Bunzi's Rod",
 		sub="Ammurapi Shield",
-		--sub="Culminus", --One to be feared HTMB
+		sub="Culminus",
 		ammo={ name="Ghastly Tathlum +1", augments={'Path: A',}},
 		head="Agwu's Cap",
 		body="Agwu's Robe",
@@ -609,7 +609,7 @@ function init_gear_sets()
     sets.HelixBurst = {
 		main="Bunzi's Rod",
 		sub="Ammurapi Shield",
-		--sub="Culminus", --One to be feared HTMB
+		sub="Culminus",
 		ammo="Ghastly Tathlum +1",
 		head="Arbatel Bonnet +3",
 		body="Agwu's Robe",

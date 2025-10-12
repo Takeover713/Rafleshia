@@ -6,59 +6,171 @@ function user_setup()
 	state.PhysicalDefenseMode:options('PDT')
 	state.MagicalDefenseMode:options('MDT')
 	state.ResistDefenseMode:options('MEVA')
-	state.Weapons:options('None','DualWeapons','MeleeWeapons','Zeni','Zeni2000')
-
-	gear.obi_cure_waist = "Austerity Belt +1"
-	gear.obi_cure_back = "Alaunus's Cape"
-
-	gear.obi_nuke_waist = "Sekhmet Corset"
-	gear.obi_high_nuke_waist = "Yamabuki-no-Obi"
-	gear.obi_nuke_back = "Toro Cape"
-
-		-- Additional local binds	
-	
-	-- send_command('bind ^` input /ma "Arise" <t>')
-	-- send_command('bind !` input /ja "Penury" <me>')
-	-- send_command('bind @` gs c cycle MagicBurstMode')
-	-- send_command('bind ^@!` gs c toggle AutoCaress')
-	-- send_command('bind ^backspace input /ja "Sacrosanctity" <me>')
-	-- send_command('bind @backspace input /ma "Aurora Storm" <me>')
-	-- send_command('bind !pause gs c toggle AutoSubMode') --Automatically uses sublimation.
-	-- send_command('bind !backspace input /ja "Accession" <me>')
-	-- send_command('bind != input /ja "Sublimation" <me>')
-	-- send_command('bind ^delete input /ja "Dark Arts" <me>')
-	-- send_command('bind !delete input /ja "Addendum: Black" <me>')
-	-- send_command('bind @delete input /ja "Manifestation" <me>')
-	-- send_command('bind ^\\\\ input /ma "Protectra V" <me>')
-	-- send_command('bind @\\\\ input /ma "Shellra V" <me>')
-	-- send_command('bind !\\\\ input /ma "Reraise IV" <me>')
+	state.Weapons:options('None','Zeni','Zeni2000')
 
     select_default_macro_book(1, 1)
 end
 
 -- Define sets and vars used by this job file.
 function init_gear_sets()
-    --------------------------------------
-    -- Start defining the sets
-    --------------------------------------
 
+--Augments 	Shinjutsu-no-obi, Scales
+		--	Fi Follet Cape +1, Hides
+		--	Alaunus's Cape, Add DT
+		--	Mephitas's Ring +1, Lustreless Hide
+		--	Obstin. Sash, Henwen Ody
+
+    -----------------------------
+    -- Start defining the sets --
+    -----------------------------
+	
 	-- Weapons sets
-	sets.weapons.MeleeWeapons = {main="Izcalli",sub="Ammurapi Shield"}
-	sets.weapons.DualWeapons = {main="Izcalli",sub="Nehushtan"}
 	sets.WakeUpWeapons = {main="Prime Maul"}
 	sets.weapons.Zeni = {range="Soultrapper",ammo="Blank Soulplate"}
 	sets.weapons.Zeni2000 = {range="Soultrapper 2000",ammo="Blank Soulplate"}
     sets.buff.Sublimation = {waist="Embla Sash"}
     sets.buff.DTSublimation = {waist="Embla Sash"}
 	
-    -- Precast Sets
+	-- Idle sets --
+	
+	sets.idle = {
+		main="Daybreak",
+		sub="Genmei Shield",
+		ammo="Homiliary",
+		head="Bunzi's Hat",
+		body="Ebers Bliaut +3",
+		hands="Bunzi's Gloves",
+		legs="Ebers Pant. +3",
+		feet="Ebers Duckbills +3",
+		neck="Loricate Torque +1",
+		waist="Plat. Mog. Belt",
+		left_ear="Etiolation Earring",
+		right_ear="Genmei Earring", -- Eabani earring
+		left_ring="Murky Ring",
+		right_ring="Stikini Ring +1",
+		back="Alaunus's Cape",
+}
+
+	sets.idle.Refresh = {
+		main="Daybreak",
+		sub="Genmei Shield",
+		ammo="Homiliary",
+		head="Bunzi's Hat",
+		body="Ebers Bliaut +3",
+		hands="Bunzi's Gloves",
+		legs="Ebers Pant. +3",
+		feet="Ebers Duckbills +3",
+		neck="Loricate Torque +1",
+		waist="Plat. Mog. Belt",
+		left_ear="Etiolation Earring",
+		right_ear="Genmei Earring", -- Eabani earring domain points
+		left_ring="Murky Ring",
+		right_ring="Stikini Ring +1",
+		back="Alaunus's Cape",
+}
+
+	sets.idle.PDT = {
+		main="Daybreak",
+		sub="Genmei Shield",
+		ammo="Homiliary",
+		head="Bunzi's Hat",
+		body="Ebers Bliaut +3",
+		hands="Bunzi's Gloves",
+		legs="Ebers Pant. +3",
+		feet="Ebers Duckbills +3",
+		neck="Loricate Torque +1",
+		waist="Plat. Mog. Belt",
+		left_ear="Etiolation Earring",
+		right_ear="Genmei Earring", -- Eabani earring
+		left_ring="Murky Ring",
+		right_ring="Stikini Ring +1",
+		back="Alaunus's Cape",
+}
+	
+		
+	sets.idle.MDT = {}
+		
+	sets.idle.Weak = {
+		main="Daybreak",
+		sub="Genmei Shield",
+		ammo="Homiliary",
+		head="Bunzi's Hat",
+		body="Ebers Bliaut +3",
+		hands="Bunzi's Gloves",
+		legs="Ebers Pant. +3",
+		feet="Ebers Duckbills +3",
+		neck="Loricate Torque +1",
+		waist="Plat. Mog. Belt",
+		left_ear="Etiolation Earring",
+		right_ear="Genmei Earring", -- Eabani earring
+		left_ring="Murky Ring",
+		right_ring="Stikini Ring +1",
+		back="Alaunus's Cape",
+}
+
+    -- Defense sets
+
+	sets.defense.PDT = {
+		main="Malignance Pole",
+		sub="Achaq Grip",
+		ammo="Homiliary",
+		head="Aya. Zucchetto +1",
+		body="Ayanmo Corazza +1",
+		hands="Aya. Manopolas +2",
+		legs="Aya. Cosciales +2",
+		feet="Aya. Gambieras +2",
+		neck="Loricate Torque +1",
+		waist="Isa Belt",
+		left_ear="Magnetic Earring",
+		right_ear="Genmei Earring",
+		left_ring="Murky Ring",
+		right_ring="Dark Ring",
+		back="Solemnity Cape",
+}
+
+	sets.defense.MDT = {
+		main="Malignance Pole",
+		sub="Achaq Grip",
+		ammo="Homiliary",
+		head="Aya. Zucchetto +1",
+		body="Ayanmo Corazza +1",
+		hands="Aya. Manopolas +2",
+		legs="Aya. Cosciales +2",
+		feet="Aya. Gambieras +2",
+		neck="Loricate Torque +1",
+		waist="Isa Belt",
+		left_ear="Magnetic Earring",
+		right_ear="Genmei Earring",
+		left_ring="Murky Ring",
+		right_ring="Dark Ring",
+		back="Solemnity Cape",
+}
+
+    sets.defense.MEVA = {
+		main="Malignance Pole",
+		sub="Achaq Grip",
+		ammo="Homiliary",
+		head="Aya. Zucchetto +1",
+		body="Ayanmo Corazza +1",
+		hands="Aya. Manopolas +2",
+		legs="Aya. Cosciales +2",
+		feet="Aya. Gambieras +2",
+		neck="Loricate Torque +1",
+		waist="Isa Belt",
+		left_ear="Magnetic Earring",
+		right_ear="Genmei Earring",
+		left_ring="Murky Ring",
+		right_ring="Dark Ring",
+		back="Solemnity Cape",
+}
+    -- Precast Sets --
 
     -- Fast cast sets for spells
     sets.precast.FC = {
-		main="Grioavolr", --main="C. Palug hammer",
-		--sub="Chanter's Shield", 
+		main="C. Palug hammer",
+		sub="Chanter's Shield", 
 		ammo="Incantor Stone", --Impatiens
-		head="Vanya Hood", --Bunzi's Hat
+		head="Bunzi's Hat",
 		body="Inyanga Jubbah +2",
 		hands="Fanatic Gloves", --Fast Cast"+7
 		--legs={ name="Lengo Pants", augments={'INT+5','Mag. Acc.+13',}},
@@ -69,7 +181,7 @@ function init_gear_sets()
 		right_ear="Loquac. Earring",
 		left_ring="Prolix Ring",
 		right_ring="Kishar Ring",
-		back="Alaunus's Cape",
+		back="Alaunus's Cape", --Add DT
 }
 
     sets.precast.FC['Enhancing Magic'] = set_combine(sets.precast.FC, {waist="Siegel Sash"})
@@ -81,12 +193,12 @@ function init_gear_sets()
 		main="C. Palug hammer",
 		sub="Sors Shield",
 		ammo="Incantor Stone", --Impatiens
-		head="Piety Cap +2",
+		head="Piety Cap +3",
 		body="Inyanga jubbah +2",
 		hands="Fanatic Gloves",
 		legs="Ebers Pant. +3",
 		feet="Regal Pumps +1",
-		neck="Voltsurge Torque",
+		--neck="Voltsurge Torque",
 		neck="Cleric's Torque +2",
 		waist="Witful Belt",
 		left_ear="Nourish. Earring",
@@ -102,7 +214,7 @@ function init_gear_sets()
 	sets.precast.FC.Dispelga = set_combine(sets.precast.FC, {main="Daybreak",sub="Genmei Shield"})
 
     -- Precast sets to enhance JAs
-    sets.precast.JA.Benediction = {body="Piety Briault"}
+    sets.precast.JA.Benediction = {body="Piety Briault +4"}
 
     -- Waltz set (chr and vit)
     sets.precast.Waltz = {}
@@ -117,7 +229,6 @@ function init_gear_sets()
 	sets.MaxTP.Dagan = {ear1="Etiolation Earring",ear2="Evans Earring"}
 
     --sets.precast.WS['Flash Nova'] = {}
-
     --sets.precast.WS['Mystic Boon'] = {}
 
     -- Midcast Sets
@@ -165,7 +276,7 @@ function init_gear_sets()
 	
 	sets.midcast.Cure = {
 		main={ name="Queller Rod", augments={'Healing magic skill +15','"Cure" potency +10%','"Cure" spellcasting time -7%',}}, 
-		--main="Raetic Rod +1",
+		--main="Raetic Rod +1", 30M AH
 		sub="Sors Shield", --sub="Thuellaic Ecu +1",
 		ammo="Pemphredo Tathlum",
 		head="Ebers Cap +3",
@@ -173,7 +284,6 @@ function init_gear_sets()
 		hands="Theophany Mitts +3",
 		legs="Ebers Pant. +3", 
 		feet="Vanya Clogs", --Kaykaus Boots +1 D: Mag. Acc. +20,Cure Potency +6,Fast Cast +4%
-		neck="Incanter's Torque", 
 		neck="Clr. Torque +2",
 		waist="Luminary Sash", 
 		-- waist="Shinjutsu-no-obi +1", needs augments, Lustreless Scale
@@ -220,7 +330,6 @@ function init_gear_sets()
 		
 	--Melee Curesets are used whenever your Weapons state is set to anything but None.
 	sets.midcast.MeleeCure = {}
-		
 	sets.midcast.MeleeCureSolace = set_combine(sets.midcast.MeleeCure, {body="Ebers Bliaud +3"})
 	sets.midcast.MeleeLightWeatherCure = set_combine(sets.midcast.MeleeCure, {waist="Hachirin-no-Obi"})
 	sets.midcast.MeleeLightWeatherCureSolace = set_combine(sets.midcast.MeleeCure, {body="Ebers Bliaud +3",waist="Hachirin-no-Obi"})
@@ -250,43 +359,40 @@ function init_gear_sets()
 	sets.midcast.MeleeLightDayCuraga.DT = set_combine(sets.midcast.Cure.DT, {waist="Hachirin-no-Obi"})
 
 	sets.midcast.Cursna = {
-	main="Yagrush",
-	sub="Sors Shield",
+		main="Yagrush",
+		sub="Sors Shield",
 --	sub="Thuellaic Ecu +1",
-	ammo="Incantor Stone",
-	head={ name="Vanya Hood", augments={'MP+50','"Fast Cast"+10','Haste+2%',}},
-	body="Ebers Bliaut +3",
-	hands="Fanatic Gloves",
-	legs="Th. Pant. +3",
-	feet="Vanya Clogs",
-	neck="Malison Medallion",
-	waist="Bishop's Sash",
-	left_ear="Meili Earring",
-	right_ear="Ebers Earring +2",
-	left_ring="Prolix Ring",
-	right_ring="Kishar Ring",
-	left_ring="Menelaus's Ring",
-	right_ring="Haoma's Ring",
-	back="Alaunus's Cape",
+		ammo="Incantor Stone",
+		head={ name="Vanya Hood", augments={'MP+50','"Fast Cast"+10','Haste+2%',}},
+		body="Ebers Bliaut +3",
+		hands="Fanatic Gloves",
+		legs="Th. Pant. +3",
+		feet="Vanya Clogs",
+		neck="Malison Medallion",
+		waist="Bishop's Sash",
+		left_ear="Meili Earring",
+		right_ear="Ebers Earring +2",
+		left_ring="Menelaus's Ring",
+		right_ring="Haoma's Ring",
+		back="Alaunus's Cape",
 }
 
 	sets.midcast.StatusRemoval = {
-    main="Yagrush",
-    sub="Sors Shield",
-    ammo="Pemphredo Tathlum",
-    head={ name="Vanya Hood", augments={'MP+50','"Fast Cast"+10','Haste+2%',}},
-    body="Ebers Bliaut +3",
-    hands="Ebers Mitts +3",
-    legs="Ebers Pant. +3",
-    feet="Ebers Duckbills +3",
-    neck="Voltsurge Torque",
-	neck="Cleric's Torque +2",
-    waist="Witful Belt",
-    left_ear="Magnetic Earring",
-    right_ear="Loquac. Earring",
-    left_ring="Prolix Ring",
-    right_ring="Kishar Ring",
-    back="Fi Follet Cape +1", --Augment Lustreless Hide
+		main="Yagrush",
+		sub="Sors Shield",
+		ammo="Pemphredo Tathlum",
+		head={ name="Vanya Hood", augments={'MP+50','"Fast Cast"+10','Haste+2%',}},
+		body="Ebers Bliaut +3",
+		hands="Ebers Mitts +3",
+		legs="Ebers Pant. +3",
+		feet="Ebers Duckbills +3",
+		neck="Cleric's Torque +2",
+		waist="Witful Belt",
+		left_ear="Magnetic Earring",
+		right_ear="Loquac. Earring",
+		left_ring="Prolix Ring",
+		right_ring="Kishar Ring",
+		back="Fi Follet Cape +1", --Augment Lustreless Hide
 }
 
     -- 110 total Enhancing Magic Skill; caps even without Light Arts
@@ -298,7 +404,7 @@ function init_gear_sets()
 		body={ name="Telchine Chas.", augments={'Enh. Mag. eff. dur. +10',}},
 		hands={ name="Telchine Gloves", augments={'Enh. Mag. eff. dur. +8',}},
 		legs={ name="Telchine Braconi", augments={'Enh. Mag. eff. dur. +10',}},
-		feet="Theo. Duckbills +2",
+		feet="Theo. Duckbills +4",
 		neck="Colossus's Torque",
 		waist="Embla Sash",
 		left_ear="Andoaa Earring",
@@ -316,7 +422,7 @@ function init_gear_sets()
 		body={ name="Telchine Chas.", augments={'Enh. Mag. eff. dur. +10',}},
 		hands={ name="Telchine Gloves", augments={'Enh. Mag. eff. dur. +8',}},
 		legs={ name="Telchine Braconi", augments={'Enh. Mag. eff. dur. +10',}},
-		feet="Theo. Duckbills +2",
+		feet="Theo. Duckbills +4",
 		neck="Colossus's Torque",
 		waist="Embla Sash",
 		left_ear="Andoaa Earring",
@@ -344,13 +450,14 @@ function init_gear_sets()
 		main="Bolelabunga",
 		head="Inyanga Tiara +2",
 		hands="Ebers Mitts +3",
-		body="Piety Bliaut +3",
-		legs="Th. Pant. +3"})
+		body="Piety Briault +4",
+		legs="Th. Pant. +3"
+})
 	
-	sets.midcast.Protect = set_combine(sets.midcast['Enhancing Magic'], {ring2="Sheltered Ring",feet="Piety Duckbills +2",ear1="Gifted Earring",waist="Sekhmet Corset"})
-	sets.midcast.Protectra = set_combine(sets.midcast['Enhancing Magic'], {ring2="Sheltered Ring",feet="Piety Duckbills +2",ear1="Gifted Earring",waist="Sekhmet Corset"})
-	sets.midcast.Shell = set_combine(sets.midcast['Enhancing Magic'], {ring2="Sheltered Ring",legs="Piety Pantaln. +2",ear1="Gifted Earring",waist="Sekhmet Corset"})
-	sets.midcast.Shellra = set_combine(sets.midcast['Enhancing Magic'], {ring2="Sheltered Ring",legs="Piety Pantaln. +2",ear1="Gifted Earring",waist="Sekhmet Corset"})
+	sets.midcast.Protect = set_combine(sets.midcast['Enhancing Magic'], {ring2="Sheltered Ring",feet="Piety Duckbills +1",ear1="Gifted Earring",waist="Sekhmet Corset"})
+	sets.midcast.Protectra = set_combine(sets.midcast['Enhancing Magic'], {ring2="Sheltered Ring",feet="Piety Duckbills +1",ear1="Gifted Earring",waist="Sekhmet Corset"})
+	sets.midcast.Shell = set_combine(sets.midcast['Enhancing Magic'], {ring2="Sheltered Ring",legs="Piety Pantaln. +3",ear1="Gifted Earring",waist="Sekhmet Corset"})
+	sets.midcast.Shellra = set_combine(sets.midcast['Enhancing Magic'], {ring2="Sheltered Ring",legs="Piety Pantaln. +3",ear1="Gifted Earring",waist="Sekhmet Corset"})
 	
 	
 	sets.midcast.BarElement = {
@@ -360,13 +467,13 @@ function init_gear_sets()
 		head="Ebers Cap +3",
 		body="Ebers Bliaut +3",
 		hands="Ebers Mitts +3",
-		legs={ name="Piety Pantaln. +2", augments={'Enhances "Afflatus Misery" effect',}},
+		legs="Piety Pantaln. +3",
 		feet="Ebers Duckbills +3",
 		neck="Incanter's Torque",
 		waist="Embla Sash",
 		left_ear="Andoaa Earring",
 		right_ear="Magnetic Earring",
-		left_ring="Defending Ring",
+		left_ring="Murky Ring",
 		right_ring="Stikini Ring +1",
 		back="Fi Follet Cape +1",
 }
@@ -434,12 +541,12 @@ function init_gear_sets()
 		hands="Bunzi's Gloves",
 		--hands="Regal Cuffs",
 		legs="Bunzi's Pants",
-		--legs={ name="Chironic Hose", augments={'Mag. Acc.+24','Haste+1','MND+14','"Mag.Atk.Bns."+11',}},
+		legs="Chironic Hose", --Needs augmenting
 		feet="Theo. Duckbills +2",
 		neck="Null Loop",
-		waist={ name="Acuity Belt +1", augments={'Path: A',}}, -- Obstin. Sash augmented
+		waist={ name="Acuity Belt +1", augments={'Path: A',}}, -- Obstin. Sash augmented Henwen Ody
 		left_ear="Regal Earring",
-		right_ear="Malignance Earring", -- whm sortie earring
+		right_ear="Ebers Earring +2",
 		left_ring="Stikini Ring +1",
 		right_ring="Stikini Ring +1",
 		back="Null Shawl",
@@ -474,142 +581,12 @@ function init_gear_sets()
 		neck="Grandiose Chain",
 		left_ear="Relaxing Earring",
 		right_ear="Hearty Earring", -- Eabani earring
-		left_ring="Defending Ring",
+		left_ring="Murky Ring",
 		right_ring="Stikini Ring +1",
 		back="Alaunus's Cape",
 }
 
-    -- Idle sets (default idle set not needed since the other three are defined, but leaving for testing purposes)
-	sets.idle = {
-		main="Daybreak",
-		sub="Genmei Shield",
-		ammo="Homiliary",
-		head="Bunzi's Hat",
-		body="Ebers Bliaut +3",
-		hands="Bunzi's Gloves",
-		legs="Ebers Pant. +3",
-		feet="Ebers Duckbills +3",
-		neck="Loricate Torque +1",
-		waist="Plat. Mog. Belt",
-		left_ear="Etiolation Earring",
-		right_ear="Genmei Earring", -- Eabani earring
-		left_ring="Defending Ring",
-		right_ring="Stikini Ring +1",
-		back="Alaunus's Cape",
-}
-
-	sets.idle.Refresh = {
-		main="Daybreak",
-		sub="Genmei Shield",
-		ammo="Homiliary",
-		head="Bunzi's Hat",
-		body="Ebers Bliaut +3",
-		hands="Bunzi's Gloves",
-		legs="Ebers Pant. +3",
-		feet="Ebers Duckbills +3",
-		neck="Loricate Torque +1",
-		waist="Plat. Mog. Belt",
-		left_ear="Etiolation Earring",
-		right_ear="Genmei Earring", -- Eabani earring
-		left_ring="Defending Ring",
-		right_ring="Stikini Ring +1",
-		back="Alaunus's Cape",
-}
-
-	sets.idle.PDT = {
-		main="Daybreak",
-		sub="Genmei Shield",
-		ammo="Homiliary",
-		head="Bunzi's Hat",
-		body="Ebers Bliaut +3",
-		hands="Bunzi's Gloves",
-		legs="Ebers Pant. +3",
-		feet="Ebers Duckbills +3",
-		neck="Loricate Torque +1",
-		waist="Plat. Mog. Belt",
-		left_ear="Etiolation Earring",
-		right_ear="Genmei Earring", -- Eabani earring
-		left_ring="Defending Ring",
-		right_ring="Stikini Ring +1",
-		back="Alaunus's Cape",
-}
-	
-		
-	sets.idle.MDT = {}
-		
-	sets.idle.Weak = {
-		main="Daybreak",
-		sub="Genmei Shield",
-		ammo="Homiliary",
-		head="Bunzi's Hat",
-		body="Ebers Bliaut +3",
-		hands="Bunzi's Gloves",
-		legs="Ebers Pant. +3",
-		feet="Ebers Duckbills +3",
-		neck="Loricate Torque +1",
-		waist="Plat. Mog. Belt",
-		left_ear="Etiolation Earring",
-		right_ear="Genmei Earring", -- Eabani earring
-		left_ring="Defending Ring",
-		right_ring="Stikini Ring +1",
-		back="Alaunus's Cape",
-}
-
-    -- Defense sets
-
-	sets.defense.PDT = {
-		main="Malignance Pole",
-		sub="Achaq Grip",
-		ammo="Homiliary",
-		head="Aya. Zucchetto +1",
-		body="Ayanmo Corazza +1",
-		hands="Aya. Manopolas +2",
-		legs="Aya. Cosciales +2",
-		feet="Aya. Gambieras +2",
-		neck="Loricate Torque +1",
-		waist="Isa Belt",
-		left_ear="Magnetic Earring",
-		right_ear="Genmei Earring",
-		left_ring="Defending Ring",
-		right_ring="Dark Ring",
-		back="Solemnity Cape",
-}
-
-	sets.defense.MDT = {
-		main="Malignance Pole",
-		sub="Achaq Grip",
-		ammo="Homiliary",
-		head="Aya. Zucchetto +1",
-		body="Ayanmo Corazza +1",
-		hands="Aya. Manopolas +2",
-		legs="Aya. Cosciales +2",
-		feet="Aya. Gambieras +2",
-		neck="Loricate Torque +1",
-		waist="Isa Belt",
-		left_ear="Magnetic Earring",
-		right_ear="Genmei Earring",
-		left_ring="Defending Ring",
-		right_ring="Dark Ring",
-		back="Solemnity Cape",
-}
-
-    sets.defense.MEVA = {
-		main="Malignance Pole",
-		sub="Achaq Grip",
-		ammo="Homiliary",
-		head="Aya. Zucchetto +1",
-		body="Ayanmo Corazza +1",
-		hands="Aya. Manopolas +2",
-		legs="Aya. Cosciales +2",
-		feet="Aya. Gambieras +2",
-		neck="Loricate Torque +1",
-		waist="Isa Belt",
-		left_ear="Magnetic Earring",
-		right_ear="Genmei Earring",
-		left_ring="Defending Ring",
-		right_ring="Dark Ring",
-		back="Solemnity Cape",
-}
+  
 		
 		-- Engaged sets
 
