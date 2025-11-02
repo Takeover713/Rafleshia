@@ -11,9 +11,6 @@ function user_setup()
 	state.Passive = M{['description'] = 'Passive Mode','None','Twilight'}
 	state.Weapons:options('Chango','Naegling','Polearm','Loxotic','ProcDagger','ProcSword','ProcGreatSword','ProcScythe','ProcPolearm','ProcGreatKatana','ProcClub','ProcStaff')
 
-	gear.da_jse_back = {name="Cichol's Mantle",augments={'DEX+20','Accuracy+20 Attack+20','"Dbl.Atk."+10'}}
-	gear.crit_jse_back = {name="Cichol's Mantle",augments={'STR+20','Accuracy+20 Attack+20','Crit.hit rate+10'}}
-
 	-- Additional local binds
 	-- send_command('bind ^` input /ja "Hasso" <me>')
 	-- send_command('bind !` input /ja "Seigan" <me>')
@@ -61,7 +58,7 @@ function init_gear_sets()
 		left_ear="Etiolation Earring",
 		right_ear="Odnowa Earring +1",
 		left_ring="Defending Ring",
-		right_ring={ name="Dark Ring", augments={'Phys. dmg. taken -5%','Magic dmg. taken -3%',}},
+		right_ring="Murky Ring",
 		back="Solemnity Cape",
 }
 		
@@ -82,7 +79,7 @@ function init_gear_sets()
 		left_ear="Etiolation Earring",
 		right_ear="Odnowa Earring +1",
 		left_ring="Defending Ring",
-		right_ring={ name="Dark Ring", augments={'Phys. dmg. taken -5%','Magic dmg. taken -3%',}},
+		right_ring="Murkey Ring",
 		back="Solemnity Cape",
 }
 		
@@ -100,7 +97,7 @@ function init_gear_sets()
 		left_ear="Etiolation Earring",
 		right_ear="Odnowa Earring +1",
 		left_ring="Defending Ring",
-		right_ring={ name="Dark Ring", augments={'Phys. dmg. taken -5%','Magic dmg. taken -3%',}},
+		right_ring="Murkey Ring",
 		back="Solemnity Cape",
 }
 		
@@ -118,7 +115,7 @@ function init_gear_sets()
 		left_ear="Etiolation Earring",
 		right_ear="Odnowa Earring +1",
 		left_ring="Defending Ring",
-		right_ring={ name="Dark Ring", augments={'Phys. dmg. taken -5%','Magic dmg. taken -3%',}},
+		right_ring="Murkey Ring",
 		back="Solemnity Cape",
 }
 
@@ -326,7 +323,7 @@ function init_gear_sets()
 	sets.Kiting = {feet="Hermes' Sandals +1"}
 	sets.Reraise = {head="Twilight Helm",body="Twilight Mail"}
 	sets.buff.Doom = set_combine(sets.buff.Doom, {})
-	sets.buff.Sleep = {head="Frenzy Sallet"}
+	--sets.buff.Sleep = {head="Frenzy Sallet"}
      
 
 	
