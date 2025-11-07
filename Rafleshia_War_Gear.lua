@@ -1,6 +1,6 @@
 function user_setup()
 	-- Options: Override default values
-    state.OffenseMode:options('Normal')
+    state.OffenseMode:options('Normal','DT')
     state.WeaponskillMode:options('Match','Normal')
     state.HybridMode:options('Normal')
     state.PhysicalDefenseMode:options('PDT', 'PDTReraise')
@@ -10,13 +10,6 @@ function user_setup()
     state.ExtraMeleeMode = M{['description']='Extra Melee Mode','None'}
 	state.Passive = M{['description'] = 'Passive Mode','None','Twilight'}
 	state.Weapons:options('Chango','Naegling','Polearm','Loxotic','ProcDagger','ProcSword','ProcGreatSword','ProcScythe','ProcPolearm','ProcGreatKatana','ProcClub','ProcStaff')
-
-	-- Additional local binds
-	-- send_command('bind ^` input /ja "Hasso" <me>')
-	-- send_command('bind !` input /ja "Seigan" <me>')
-    -- send_command('bind !f11 gs c cycle ExtraMeleeMode')
-	-- send_command('bind @` gs c cycle SkillchainMode')
-	-- send_command('bind !r gs c weapons Greatsword;gs c update')
 	
 	autows_list = {['Chango']='Upheaval',['Polearm']='Impulse Drive',['Loxotic']='Judgment',['Naegling']='Savage Blade'}
 	
@@ -125,8 +118,22 @@ function init_gear_sets()
 		head={ name="Sakpata's Helm", augments={'Path: A',}},
 		body={ name="Sakpata's Plate", augments={'Path: A',}},
 		hands={ name="Sakpata's Gauntlets", augments={'Path: A',}},
-		-- legs="Pumm. Cuisses +4",
-		-- feet="Pumm. Calligae +4",
+		legs="Pumm. Cuisses +4",
+		feet="Pumm. Calligae +4",
+		neck={ name="War. Beads +2", augments={'Path: A',}},
+		waist={ name="Sailfi Belt +1", augments={'Path: A',}},
+		left_ear={ name="Schere Earring", augments={'Path: A',}},
+		right_ear="Boii Earring +1",
+		left_ring="Niqmaddu Ring",
+		right_ring="Chirich Ring +1",
+		back={ name="Cichol's Mantle", augments={'DEX+20','Accuracy+20 Attack+20','Accuracy+10','"Dbl.Atk."+10','Damage taken-5%',}},
+}
+
+	sets.engaged.DT = {
+		ammo={ name="Coiste Bodhar", augments={'Path: A',}},
+		head={ name="Sakpata's Helm", augments={'Path: A',}},
+		body={ name="Sakpata's Plate", augments={'Path: A',}},
+		hands={ name="Sakpata's Gauntlets", augments={'Path: A',}},
 		legs={ name="Sakpata's Cuisses", augments={'Path: A',}},
 		feet={ name="Sakpata's Leggings", augments={'Path: A',}},
 		neck={ name="War. Beads +2", augments={'Path: A',}},
@@ -140,7 +147,15 @@ function init_gear_sets()
 	
 	-- Precast Sets
 	
-    sets.Enmity = {ammo="Sapience Orb",neck="Unmoving Collar +1",waist="Trance Belt",left_ear="Cryptic Earring",left_ring="Apeile Ring",right_ring="Apeile Ring +1",back={ name="Cichol's Mantle", augments={'Enmity+10',}},}
+    sets.Enmity = {
+		ammo="Sapience Orb",
+		neck="Unmoving Collar +1",
+		waist="Trance Belt",
+		left_ear="Cryptic Earring",
+		left_ring="Apeile Ring",
+		right_ring="Apeile Ring +1",
+		back={ name="Cichol's Mantle", augments={'Enmity+10',}},}
+		
 	sets.Knockback = {}
 	sets.passive.Twilight = {head="Twilight Helm",body="Twilight Mail"}
 	
@@ -164,6 +179,10 @@ function init_gear_sets()
 	sets.precast.JA['Blood Rage'] = set_combine(sets.Enmity,{body="Boii Lorica +2"})
 	sets.precast.JA['Brazen Rush'] = {}
 	sets.precast.JA['Provoke'] = set_combine(sets.Enmity,{})
+
+	-- subjob JA's
+	sets.precast.JA['Jump'] = {feet="Maenadic Gambrieras"}
+	sets.precast.JA['High Jump'] = {feet="Maenadic Gambrieras"}
                    
 	-- Waltz set (chr and vit)
 	sets.precast.Waltz = {}
@@ -343,6 +362,8 @@ function select_default_macro_book()
     end
 end
 
-send_command('wait 5;input /lockstyleset 12')
+function user_job_lockstyle()
+	windower.chat.input('/lockstyleset 12')
+end
 
 send_command('exec init.txt')
