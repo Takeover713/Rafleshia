@@ -423,7 +423,7 @@ function init_gear_sets()
 		head="Inyanga Tiara +2",
 		hands="Ebers Mitts +3",
 		body="Piety Briault +4",
-		legs="Theophany Pantaloons +3"
+		legs="Theophany Pantaloons +4"
 })
 	
 	sets.midcast.Protect = set_combine(sets.midcast['Enhancing Magic'], {right_ring="Sheltered Ring",feet="Piety Duckbills +1",left_ear="Gifted Earring",waist="Sekhmet Corset"})
@@ -488,8 +488,8 @@ function init_gear_sets()
 		main="Daybreak", --Yagrush R15
 		sub="Ammurapi Shield",
 		ammo="Pemphredo Tathlum",
-		head="Theophany Cap +3",
-		body="Theo. Bliaut +3",
+		head="Theophany Cap +4",
+		body="Theo. Bliaut +4",
 		hands="Theo. Mitts +4",
 		legs="Theophany Pantaloons +4",
 		feet="Theo. Duckbills +4",
@@ -506,8 +506,8 @@ function init_gear_sets()
 		main="Daybreak",
 		sub="Ammurapi Shield",
 		ammo="Pemphredo Tathlum",
-		head="Theophany Cap +3",
-		body="Theo. Bliaut +3",
+		head="Theophany Cap +4",
+		body="Theo. Bliaut +4",
 		hands="Theo. Mitts +4",
 		legs="Theophany Pantaloons +4",
 		feet="Theo. Duckbills +4",
