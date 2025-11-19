@@ -167,7 +167,7 @@ function init_gear_sets()
 		main="C. Palug hammer",
 		sub="Sors Shield",
 		ammo="Incantor Stone", --Impatiens
-		head="Piety Cap +3",
+		head="Piety Cap +4",
 		body="Inyanga jubbah +2",
 		hands="Fanatic Gloves",
 		legs="Ebers Pant. +3",
@@ -189,7 +189,7 @@ function init_gear_sets()
 
     -- Precast sets to enhance JAs
     sets.precast.JA.Benediction = {body="Piety Briault +4"}
-	sets.precast.JA.Devotion = {head="Piety Cap +3"}
+	sets.precast.JA.Devotion = {head="Piety Cap +4"}
 
     -- Waltz set (chr and vit)
     sets.precast.Waltz = {}
@@ -428,8 +428,8 @@ function init_gear_sets()
 	
 	sets.midcast.Protect = set_combine(sets.midcast['Enhancing Magic'], {right_ring="Sheltered Ring",feet="Piety Duckbills +1",left_ear="Gifted Earring",waist="Sekhmet Corset"})
 	sets.midcast.Protectra = set_combine(sets.midcast['Enhancing Magic'], {right_ring="Sheltered Ring",feet="Piety Duckbills +1",left_ear="Gifted Earring",waist="Sekhmet Corset"})
-	sets.midcast.Shell = set_combine(sets.midcast['Enhancing Magic'], {right_ring="Sheltered Ring",legs="Piety Pantaln. +3",left_ear="Gifted Earring",waist="Sekhmet Corset"})
-	sets.midcast.Shellra = set_combine(sets.midcast['Enhancing Magic'], {right_ring="Sheltered Ring",legs="Piety Pantaln. +3",left_ear="Gifted Earring",waist="Sekhmet Corset"})
+	sets.midcast.Shell = set_combine(sets.midcast['Enhancing Magic'], {right_ring="Sheltered Ring",legs="Piety Pantaln. +4",left_ear="Gifted Earring",waist="Sekhmet Corset"})
+	sets.midcast.Shellra = set_combine(sets.midcast['Enhancing Magic'], {right_ring="Sheltered Ring",legs="Piety Pantaln. +4",left_ear="Gifted Earring",waist="Sekhmet Corset"})
 	
 	
 	sets.midcast.BarElement = {
@@ -439,7 +439,7 @@ function init_gear_sets()
 		head="Ebers Cap +3",
 		body="Ebers Bliaut +3",
 		hands="Ebers Mitts +3",
-		legs="Piety Pantaln. +3",
+		legs="Piety Pantaln. +4",
 		feet="Ebers Duckbills +3",
 		neck="Incanter's Torque",
 		waist="Embla Sash",
