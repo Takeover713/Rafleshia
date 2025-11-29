@@ -101,7 +101,7 @@ function init_gear_sets()
 		ammo="Staunch Tathlum +1",
 		head="Turms Cap +1",
 		body="Gleti's Cuirass",
-		hands="Gleti's Gauntlets",
+		hands="Regal Gloves",
 		legs="Gleti's Breeches",
 		feet="Gleti's Boots",
 		neck="Loricate Torque +1",
@@ -402,10 +402,8 @@ function select_default_macro_book()
     end
 end
 
-function sub_job_change(new,old)
-send_command('wait 5;input /lockstyleset 12')
+function user_job_lockstyle()
+	windower.chat.input('/lockstyleset 12')
 end
-
-send_command('wait 5;input /lockstyleset 20')
 
 send_command('exec init.txt')
